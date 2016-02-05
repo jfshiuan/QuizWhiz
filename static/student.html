@@ -23,21 +23,46 @@
       <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
       <!-- p means paragraph -->
       <div class="jumbotron">
-        <div class="t1">	<h1>QuizWhiz</h1></div>
+       <h1>Welcome Hunter!</h1>
+       <h2>Student</h2>
 
+       <a href="index.html"><button id="testjs" class="btn btn-primary btn-lg">Logout</button></a>
+     </div>
 
+     <!--  this is friend section -->
+     <h4>Friends</h4>
 
-      </div>
-
-
-
-
-
+     <div class="Friends" id="project1">
+       <a href="" class="thumbnail">
+        <img src="" alt="Jason" class="img">
+        <img src="" alt="Luis" class="img">
+        <img src="" alt="Xiaoping" class="img">
+      </a>
     </div>
 
+    <!--  this is topic section -->
+    <div class="TopicHeader">
+     <h4>Class/Subject</h4>
+   </div>
 
 
-    <form id="projectForm" role="form">
+   <div class="Topic" id="project2">
+     <a href="" class="thumbnail">
+      <button id="courseBtn1" type="button" class="btn btn-default">MATH 10A</button> <br>
+      <button id="courseBtn2" type="button" class="btn btn-default">BILD 1</button>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/introHCI.js"></script>
+
+<form id="projectForm" role="form">
     <!--<div class="form-group">
       <label for="project">Friend's name(last, first)</label>
       <select class="form-control" id="project">
@@ -46,23 +71,17 @@
       </select>
     </div>
     <![endif]-->  
-    <div class="mainButton">
-    	<a href="signup.html"><button id="Sign Up" type="button" class="btn btn-default">Sign Up</button></a>
-      <hr>
-      <a href="student.html"><button id="Student Login" type="button" class="btn btn-default">Student Login</button></a>
-      <hr>
-      <a href="instructor.html"><button id="Instructor Login" type="button" class="btn btn-default">Instructor Login</button></a>
-
+    <div class="PlayButton">
+    	<a href="play.html"><button id="playBtn" type="button" class="btn btn-default">PLAY</button></a>
     </div>
 
-    
+    <div class="StatsButton"><a href="myStats.html"><button id="statsBtn" type="button" class="btn btn-default">My Stats</button></a></div>
 
     <div class="help">
       <a href="help.html"><button id="helpBtn" type="button" class="btn btn-default">?</button></a>
     </div>
   </form>
+
   <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/introHCI.js"></script>
 </body>
 </html>

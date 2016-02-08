@@ -26,6 +26,7 @@ body {
    content:"";
    background: url("../images/calc.jpg");
    background-size:100%;
+   background-repeat: no-repeat;
    opacity: 0.2;
    top: 0;
    left: 0;

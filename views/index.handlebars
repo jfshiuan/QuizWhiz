@@ -37,7 +37,6 @@
 
 
 
-    <form id="projectForm" role="form">
     <!--<div class="form-group">
       <label for="project">Friend's name(last, first)</label>
       <select class="form-control" id="project">
@@ -50,6 +49,28 @@
     	<a href="signup.html"><button id="Sign Up" type="button" class="btn btn-default">Sign Up</button></a>
       <hr>
       <a href="student.html"><button id="Student Login" type="button" class="btn btn-default">Student Login</button></a>
+
+    <div class="container">
+      <form id="loginForm" role="form" method="get" action="/login">
+        <h3>Login</h3>
+        <div class="form-group">
+          <label for="name">Username:</label>
+          <input type="text" class="form-control" id="username" placeholder="Username" name="username">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+        </div>
+        <input type="submit" id="loginBtn" class="btn btn-default" value="Login"></input>
+      </form>
+    </div>
+
+
+
+
+
+
+
       <hr>
       <a href="instructor.html"><button id="Instructor Login" type="button" class="btn btn-default">Instructor Login</button></a>
 
@@ -60,7 +81,7 @@
     <div class="help">
       <a href="help.html"><button id="helpBtn" type="button" class="btn btn-default">?</button></a>
     </div>
-  </form>
+
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/introHCI.js"></script>

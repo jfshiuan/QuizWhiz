@@ -24,7 +24,7 @@ body {
 
 .jumbotron:after {
    content:"";
-   background: url("../images/calc.jpg");
+   background: url("/images/calc.jpg");
    background-size:100%;
    background-repeat: no-repeat;
    opacity: 0.2;

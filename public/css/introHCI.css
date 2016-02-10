@@ -9,24 +9,28 @@
 	color: #CC00AA;
 }
 
+
+
 /* this style exists to make it obvious that you've successfully linked
 the CSS to the page. feel free to remove it once the link is working. */
 body {
    border: 1px dotted gray;
    padding: 20px;
+   content:"";
+   background: url("/images/board.jpg");
 
+   background-repeat: no-repeat;
+    color:white;
 }
 
 .jumbotron {
 	position: relative;
 	background: none;
+    color:white;
 }
 
 .jumbotron:after {
-   content:"";
-   background: url("/images/calc.jpg");
-   background-size:100%;
-   background-repeat: no-repeat;
+
    opacity: 0.2;
    top: 0;
    left: 0;

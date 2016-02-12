@@ -16,6 +16,7 @@
  var play = require('./routes/play');
  var myStats = require('./routes/myStats');
  var student = require('./routes/student');
+  var instructor = require('./routes/instructor');
 //var palette = require('./routes/palette');
 // Example route
 // var user = require('./routes/user');
@@ -50,6 +51,7 @@ app.get('/help', help.help)
 app.get('/play', play.play)
 app.get('/myStats', myStats.myStats)
 app.get('/student', student.view)
+app.get('/instructor', instructor.view)
 //app.get('/project/:id', project.projectInfo);
 //app.get('/palette', palette.randomPalette)
 // Example route

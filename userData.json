@@ -4,17 +4,20 @@
 		{
 			"username": "username",
 			"password": "password",
-			"name": "name"
+			"name": "name",
+			"type": "student"
 		},
 		{
 			"username": "DJ Khaled",
 			"password": "We Da Best!",
-			"name": "Khaled Mohamed Khaled"
+			"name": "Khaled Mohamed Khaled",
+			"type:": "student"
 		},
 		{
 			"username": "DJ Khaled 2",
 			"password": "Another One",
-			"name": "Khaled Mohamed Khaled"
+			"name": "Khaled Mohamed Khaled",
+			"type": "instructor"
 		}
 	]
 }

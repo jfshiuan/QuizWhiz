@@ -7,10 +7,11 @@ exports.login = function(req, res) {
 
 	var arr = userData["loginData"];
 	var validLogin = false;
+	var userType;
 
 	for(var i=0;i<arr.length;i++){
 		var obj = arr[i];
-		var uname, pw;
+		var uname, pw, type;
 		for(var key in obj){
 			var attrName = key;
 			var attrValue = obj[key];
@@ -23,11 +24,16 @@ exports.login = function(req, res) {
 			{
 				pw=attrValue;
 			}
+			if(attrName == "type")
+			{
+				type=attrValue;
+			}
 		}
 
 		if(uname == username && pw == password)
 		{
 			validLogin=true;
+			userType=type;
 		}
 
 	}
@@ -37,7 +43,12 @@ exports.login = function(req, res) {
 
 	if(validLogin)
 	{
-		res.render('student', userData);
+		if(userType=="student")
+			res.render('student', userData);
+		if(userType=="instructor")
+		{
+			res.render('instructor', userData);
+		}
 	}
 	else
 	{

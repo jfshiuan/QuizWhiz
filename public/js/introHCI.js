@@ -18,6 +18,11 @@ $(document).ready(function() {
 function checkSignup(form)
 {
 
+	if(form.userType.value == "") {
+		alert("Error: User type cannot be blank!");
+		form.userType.focus();
+		return false;
+	}
 
 	if(form.name.value == "") {
 		alert("Error: Name cannot be blank!");

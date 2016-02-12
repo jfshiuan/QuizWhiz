@@ -1,17 +1,20 @@
 {
-	"userData":
+	"loginData":
 	[
 		{
 			"username": "username",
-			"password": "password"
+			"password": "password",
+			"name": "name"
 		},
 		{
 			"username": "DJ Khaled",
-			"password": "We Da Best!"
+			"password": "We Da Best!",
+			"name": "Khaled Mohamed Khaled"
 		},
 		{
 			"username": "DJ Khaled 2",
-			"password": "Another One"
+			"password": "Another One",
+			"name": "Khaled Mohamed Khaled"
 		}
 	]
 }

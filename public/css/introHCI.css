@@ -83,6 +83,16 @@ body {
     position:fixed;
 }
 
+#toggleClick{
+  color:white;
+  text-align: center;
+  background-color: transparent;
+}
+
+#signupForm{
+  display:none;
+}
+
 #helpBtn{
     color:red;
     font-weight: bolder;

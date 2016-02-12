@@ -1,6 +1,6 @@
 
 
-exports.myStats = function(req, res) {  
-	res.render('myStats');
+exports.studentStats = function(req, res) {  
+	res.render('studentStats');
 
 };

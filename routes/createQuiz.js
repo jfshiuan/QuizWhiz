@@ -1,6 +1,6 @@
 
 
-exports.myStats = function(req, res) {  
-	res.render('myStats');
+exports.createQuiz = function(req, res) {  
+	res.render('createQuiz');
 
 };

@@ -15,6 +15,9 @@
  var help = require('./routes/help');
  var play = require('./routes/play');
  var myStats = require('./routes/myStats');
+ var createQuiz = require('./routes/createQuiz');
+ var classStats = require('./routes/classStats');
+ var studentStats = require('./routes/studentStats');
  var student = require('./routes/student');
   var instructor = require('./routes/instructor');
 //var palette = require('./routes/palette');
@@ -50,6 +53,9 @@ app.get('/signup', signup.signup)
 app.get('/help', help.help)
 app.get('/play', play.play)
 app.get('/myStats', myStats.myStats)
+app.get('/createQuiz', createQuiz.createQuiz)
+app.get('/classStats', classStats.classStats)
+app.get('/studentStats', studentStats.studentStats)
 app.get('/student', student.view)
 app.get('/instructor', instructor.view)
 //app.get('/project/:id', project.projectInfo);

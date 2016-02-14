@@ -1,0 +1,9 @@
+{
+	"loginStatus":
+	{
+		"loggedIn": "false",
+		"name": "",
+		"username": "",
+		"userType": ""
+	}
+}

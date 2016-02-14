@@ -1,19 +1,19 @@
 var status = require("../status.json");
 
-exports.help = function(req, res)
+exports.home = function(req, res)
 {  
 
 	if (status["loginStatus"]["loggedIn"]=="false")
 	{
-		res.render('loginHelp');
+		res.redirect('/');
 	}
 	else if(status["loginStatus"]["loggedIn"]=="true" && status["loginStatus"]["userType"]=="student")
 	{
-		res.render('studentHelp');
+		res.render('student');
 	}
 	else if(status["loginStatus"]["loggedIn"]=="true" && status["loginStatus"]["userType"]=="instructor")
 	{
-		res.render('instructorHelp');
+		res.render('instructor');
 	}
 	else
 	{

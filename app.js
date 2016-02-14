@@ -11,8 +11,10 @@
 
  var index = require('./routes/index');
  var login = require('./routes/login');
+  var logout = require('./routes/logout');
  var signup = require('./routes/signup');
  var help = require('./routes/help');
+ var home = require('./routes/home');
  var play = require('./routes/play');
  var myStats = require('./routes/myStats');
  var createQuiz = require('./routes/createQuiz');
@@ -49,15 +51,17 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/login', login.login);
-app.get('/signup', signup.signup)
-app.get('/help', help.help)
-app.get('/play', play.play)
-app.get('/myStats', myStats.myStats)
-app.get('/createQuiz', createQuiz.createQuiz)
-app.get('/classStats', classStats.classStats)
-app.get('/studentStats', studentStats.studentStats)
-app.get('/student', student.view)
-app.get('/instructor', instructor.view)
+app.get('/logout', logout.logout);
+app.get('/signup', signup.signup);
+app.get('/help', help.help);
+app.get('/play', play.play);
+app.get('/myStats', myStats.myStats);
+app.get('/createQuiz', createQuiz.createQuiz);
+app.get('/classStats', classStats.classStats);
+app.get('/studentStats', studentStats.studentStats);
+app.get('/student', student.view);
+app.get('/instructor', instructor.view);
+app.get('/home', home.home);
 //app.get('/project/:id', project.projectInfo);
 //app.get('/palette', palette.randomPalette)
 // Example route

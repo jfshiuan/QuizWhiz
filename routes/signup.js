@@ -1,23 +1,35 @@
 var userData = require("../userData.json");
-
+var status = require("../status.json");
 
 
 
 exports.signup = function(req, res) {  
-	if(req.query.userType=="student"){
-	res.render('student', userData);
+
+	status["loginStatus"]["loggedIn"]="true";
+	status["loginStatus"]["name"]=req.query.name;
+	status["loginStatus"]["username"]=req.query.username;
+	status["loginStatus"]["userType"]=req.query.userType;
+
+
+
+
+userData["loginData"].push(
+{
+	username: req.query.username, 
+	password: req.query.password, 
+	name: req.query.name,
+	type: req.query.userType
+});
+
+if(req.query.userType=="student")
+{
+	res.render('student', status);
 }
 
 else
 {
-	res.render('instructor', userData);
+	res.render('instructor', status);
 }
 
-console.log(req.query.userType);
-console.log(req.query.username);
-
-	userData["loginData"].push({username: req.query.username, 
-		password: req.query.password, 
-		name: req.query.name,
-		type: req.query.userType});
+console.log(status);
 };

@@ -59,11 +59,11 @@ exports.login = function(req, res)
 
 		if(userType=="student")
 		{
-			res.render('student', userData);
+			res.render('student', status);
 		}
 		if(userType=="instructor")
 		{
-			res.render('instructor', userData);
+			res.render('instructor', status);
 		}
 	}
 	else
@@ -72,7 +72,7 @@ exports.login = function(req, res)
 		status["loginStatus"]["name"]="";
 		status["loginStatus"]["username"]="";
 		status["loginStatus"]["userType"]="";
-		res.render('login', userData);
+		res.render('login', status);
 	}
 
  /*data["friends"].push({name: req.query.name, 

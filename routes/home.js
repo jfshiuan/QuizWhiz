@@ -9,11 +9,11 @@ exports.home = function(req, res)
 	}
 	else if(status["loginStatus"]["loggedIn"]=="true" && status["loginStatus"]["userType"]=="student")
 	{
-		res.render('student');
+		res.render('student', status);
 	}
 	else if(status["loginStatus"]["loggedIn"]=="true" && status["loginStatus"]["userType"]=="instructor")
 	{
-		res.render('instructor');
+		res.render('instructor', status);
 	}
 	else
 	{

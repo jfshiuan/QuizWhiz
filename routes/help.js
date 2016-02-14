@@ -5,15 +5,15 @@ exports.help = function(req, res)
 
 	if (status["loginStatus"]["loggedIn"]=="false")
 	{
-		res.render('loginHelp');
+		res.render('loginHelp', status);
 	}
 	else if(status["loginStatus"]["loggedIn"]=="true" && status["loginStatus"]["userType"]=="student")
 	{
-		res.render('studentHelp');
+		res.render('studentHelp', status);
 	}
 	else if(status["loginStatus"]["loggedIn"]=="true" && status["loginStatus"]["userType"]=="instructor")
 	{
-		res.render('instructorHelp');
+		res.render('instructorHelp', status);
 	}
 	else
 	{

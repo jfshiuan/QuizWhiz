@@ -4,6 +4,7 @@
 		"loggedIn": "false",
 		"name": "",
 		"username": "",
-		"userType": ""
+		"userType": "",
+		"invalid": ""
 	}
 }

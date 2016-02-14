@@ -1,4 +1,5 @@
 'use strict';
+var tempForm;
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
@@ -13,6 +14,9 @@ $(document).ready(function() {
 	//$('#loginBtn').click(login);
 	$('#toggleClick').click(toggleSignup);
 }
+
+
+
 
 
 function checkSignup(form)
@@ -88,8 +92,6 @@ function checkSignup(form)
 function checkLogin(form)
 {
 
-
-
 	if(form.username.value == "") {
 		alert("Error: Username cannot be blank!");
 		form.username.focus();
@@ -102,84 +104,80 @@ function checkLogin(form)
 		return false;
 	}
 
+	tempForm=form;
 
-	console.log();
-	
+	$.get('/getLoginData', checkLoginDetails)
+
+
 	return true;
 }
 
-
-function toggleSignup(e)
+function checkLoginDetails(result)
 {
-	e.preventDefault();
 
-	$('#loginForm').toggle();
-	$('#signupForm').toggle();
+	var username = tempForm.username.value;
+	var password = tempForm.password.value;
+	var usernameExists = false;
 
-	var elem = document.getElementById("toggleClick");
-	if (elem.value=="Sign Up Instead")
+	for(var i=0;i<result.length;i++)
 	{
-		elem.value = "Login Instead";
+		var obj = result[i];
+		var uname, pw;
+		for(var key in obj)
+		{
+			var attrName = key;
+			var attrValue = obj[key];
+
+			if(attrName == "username")
+			{
+				uname=attrValue;
+			}
+			if(attrName == "password")
+			{
+				pw=attrValue;
+			}
+		}
+
+		if(uname == username)
+		{
+			usernameExists=true;
+
+			if(pw != password)
+			{
+				alert("Error: Password incorrect!");
+				tempForm.password.focus();
+			}
+		}
 
 	}
-	else
-	{
-		elem.value = "Sign Up Instead";
+
+
+		if(!usernameExists)
+		{
+			alert("Error: Username does not exist!");
+			tempForm.username.focus();
+		}
 	}
+
+
+
+	function toggleSignup(e)
+	{
+		e.preventDefault();
+
+		$('#loginForm').toggle();
+		$('#signupForm').toggle();
+
+		var elem = document.getElementById("toggleClick");
+		if (elem.value=="Sign Up Instead")
+		{
+			elem.value = "Login Instead";
+
+		}
+		else
+		{
+			elem.value = "Sign Up Instead";
+		}
 //var text = $('#toggleBtn').find("button");
 //console.log(text);
 }
-
-/*
- * Make an AJAX call to retrieve project details and add it in
- */
- function addProjectDetails(e) {
-	// Prevent following the link
-	e.preventDefault();
-
-
-	// Get the div ID, e.g., "project3"
-	var projectID = $(this).closest('.project').attr('id');
-	// get rid of 'project' from the front of the id 'project3'
-	var idNumber = projectID.substr('project'.length);
-
-	console.log("User clicked on project " + idNumber);
-
-	$.get("/project/"+idNumber, addDetails);
-
-
-
-}
-
-function addDetails(result)
-{
-	var projectHTML = '<a href="#">' +
-	'<img src="' + result['image'] + '" class="detailsImage">' + 
-	'<p>' + result['title'] + '</p>' +
-	'<p><small>' + result['date'] + '<br>' + result['summary'] + '</small></p></a>';
-
-	var id = result['id'];
-
-	$("#project" + id +" .details").html(projectHTML);
-}
-
-/*
- * Make an AJAX call to retrieve a color palette for the site
- * and apply it
- */
- function randomizeColors(e) {
- 	e.preventDefault();
-
-
-
- 	$.get("/palette", applyPalette);
-
- }
-
- function applyPalette(result)
- {
- 	var colors = result['colors']['hex'];
-
- 	$("body").css("color", colors[1]);
- 	$("body").css("background-color", colors[0]);
- }

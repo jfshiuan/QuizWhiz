@@ -22,6 +22,7 @@
  var studentStats = require('./routes/studentStats');
  var student = require('./routes/student');
   var instructor = require('./routes/instructor');
+
 //var palette = require('./routes/palette');
 // Example route
 // var user = require('./routes/user');
@@ -62,6 +63,8 @@ app.get('/studentStats', studentStats.studentStats);
 app.get('/student', student.view);
 app.get('/instructor', instructor.view);
 app.get('/home', home.home);
+app.get('/getLoginData', login.getLoginData);
+
 //app.get('/project/:id', project.projectInfo);
 //app.get('/palette', palette.randomPalette)
 // Example route

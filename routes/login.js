@@ -1,6 +1,14 @@
 var userData = require("../userData.json");
 var status = require("../status.json");
 
+
+
+exports.getLoginData = function(req, res)
+{
+	res.json(userData['loginData']);
+}
+
+
 exports.login = function(req, res)
 {  
 	
@@ -44,7 +52,6 @@ exports.login = function(req, res)
 			userType=type;
 			name=nam;
 		}
-
 	}
 
 
@@ -72,7 +79,8 @@ exports.login = function(req, res)
 		status["loginStatus"]["name"]="";
 		status["loginStatus"]["username"]="";
 		status["loginStatus"]["userType"]="";
-		res.render('login', status);
+
+		res.render('index', status);
 	}
 
  /*data["friends"].push({name: req.query.name, 

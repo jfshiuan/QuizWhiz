@@ -39,13 +39,13 @@ function checkSignup(form)
 		form.username.focus();
 		return false;
 	}
-
+/*
 	var re = /^\w+$/;
 	if(!re.test(form.username.value)) {
 		alert("Error: Username must contain only letters, numbers and underscores!");
 		form.username.focus();
 		return false;
-	}
+	}*/
 
 
 
@@ -84,7 +84,42 @@ function checkSignup(form)
 		return false;
 	}
 
+	tempForm=form;
+	$.get('/getLoginData', checkUsername);
 	
+	return true;
+}
+
+
+function checkUsername(result)
+{
+	var username = tempForm.username.value;
+
+	for(var i=0;i<result.length;i++)
+	{
+		var obj = result[i];
+		var uname;
+		for(var key in obj)
+		{
+			var attrName = key;
+			var attrValue = obj[key];
+
+			if(attrName == "username")
+			{
+				uname=attrValue;
+			}
+		}
+
+		if(uname == username)
+		{
+			alert("Error: Username already exists!");
+			form.username.focus();
+			return false;
+		}
+
+		return true;
+	}
+
 	return true;
 }
 
@@ -146,38 +181,40 @@ function checkLoginDetails(result)
 			{
 				alert("Error: Password incorrect!");
 				tempForm.password.focus();
+				return false;
 			}
 		}
-
+		return true;
 	}
 
 
-		if(!usernameExists)
-		{
-			alert("Error: Username does not exist!");
-			tempForm.username.focus();
-		}
-	}
-
-
-
-	function toggleSignup(e)
+	if(!usernameExists)
 	{
-		e.preventDefault();
+		alert("Error: Username does not exist!");
+		tempForm.username.focus();
+		return false;
+	}
+}
 
-		$('#loginForm').toggle();
-		$('#signupForm').toggle();
 
-		var elem = document.getElementById("toggleClick");
-		if (elem.value=="Sign Up Instead")
-		{
-			elem.value = "Login Instead";
 
-		}
-		else
-		{
-			elem.value = "Sign Up Instead";
-		}
+function toggleSignup(e)
+{
+	e.preventDefault();
+
+	$('#loginForm').toggle();
+	$('#signupForm').toggle();
+
+	var elem = document.getElementById("toggleClick");
+	if (elem.value=="Sign Up Instead")
+	{
+		elem.value = "Login Instead";
+
+	}
+	else
+	{
+		elem.value = "Sign Up Instead";
+	}
 //var text = $('#toggleBtn').find("button");
 //console.log(text);
 }

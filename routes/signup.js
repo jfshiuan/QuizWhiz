@@ -4,32 +4,66 @@ var status = require("../status.json");
 
 
 exports.signup = function(req, res) {  
+	var username = req.query.username;
 
-	status["loginStatus"]["loggedIn"]="true";
-	status["loginStatus"]["name"]=req.query.name;
-	status["loginStatus"]["username"]=req.query.username;
-	status["loginStatus"]["userType"]=req.query.userType;
-
+	var arr = userData["loginData"];
+	var uniqueUsername = true;
 
 
+	for(var i=0;i<arr.length;i++)
+	{
+		var obj = arr[i];
+		var uname;
+		for(var key in obj)
+		{
+			var attrName = key;
+			var attrValue = obj[key];
 
-userData["loginData"].push(
-{
-	username: req.query.username, 
-	password: req.query.password, 
-	name: req.query.name,
-	type: req.query.userType
-});
+			if(attrName == "username")
+			{
+				uname=attrValue;
+			}
+		}
 
-if(req.query.userType=="student")
-{
-	res.render('student', status);
-}
+		if(uname == username)
+		{
+			uniqueUsername=false;
+		}
+	}
 
-else
-{
-	res.render('instructor', status);
-}
 
-console.log(status);
+	if(uniqueUsername)
+	{
+
+		status["loginStatus"]["loggedIn"]="true";
+		status["loginStatus"]["name"]=req.query.name;
+		status["loginStatus"]["username"]=username;
+		status["loginStatus"]["userType"]=req.query.userType;
+
+
+
+
+		userData["loginData"].push(
+		{
+			username: req.query.username, 
+			password: req.query.password, 
+			name: req.query.name,
+			type: req.query.userType
+		});
+
+		if(req.query.userType=="student")
+		{
+			res.render('student', status);
+		}
+
+		else
+		{
+			res.render('instructor', status);
+		}
+	}
+
+	else
+	{
+		res.render('index', status);
+	}
 };

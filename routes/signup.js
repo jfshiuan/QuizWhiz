@@ -35,20 +35,20 @@ exports.signup = function(req, res) {
 	if(uniqueUsername)
 	{
 
+
 		status["loginStatus"]["loggedIn"]="true";
 		status["loginStatus"]["name"]=req.query.name;
 		status["loginStatus"]["username"]=username;
 		status["loginStatus"]["userType"]=req.query.userType;
-
-
-
+		status["loginStatus"]["image"]="/images/user.png";
 
 		userData["loginData"].push(
 		{
 			username: req.query.username, 
 			password: req.query.password, 
 			name: req.query.name,
-			type: req.query.userType
+			type: req.query.userType,
+			image: "/images/user.png"
 		});
 
 		if(req.query.userType=="student")

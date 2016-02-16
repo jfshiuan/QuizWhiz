@@ -17,12 +17,12 @@ exports.login = function(req, res)
 
 	var arr = userData["loginData"];
 	var validLogin = false;
-	var userType, name;
+	var userType, name, image, friends, courses;
 
 	for(var i=0;i<arr.length;i++)
 	{
 		var obj = arr[i];
-		var uname, pw, type, nam;
+		var uname, pw, type, nam, img, fr, crs;
 		for(var key in obj)
 		{
 			var attrName = key;
@@ -44,6 +44,18 @@ exports.login = function(req, res)
 			{
 				nam=attrValue;
 			}
+			if(attrName == "image")
+			{
+				img=attrValue;
+			}
+			if(attrName == "friends")
+			{
+				fr=attrValue;
+			}
+			if(attrName == "courses")
+			{
+				crs=attrValue;
+			}
 		}
 
 		if(uname == username && pw == password)
@@ -51,6 +63,9 @@ exports.login = function(req, res)
 			validLogin=true;
 			userType=type;
 			name=nam;
+			image=img;
+			courses=crs;
+			friends=fr;
 		}
 	}
 
@@ -63,6 +78,9 @@ exports.login = function(req, res)
 		status["loginStatus"]["name"]=name;
 		status["loginStatus"]["username"]=username;
 		status["loginStatus"]["userType"]=userType;
+		status["loginStatus"]["image"]=image;
+		status["loginStatus"]["friends"]=friends;
+		status["loginStatus"]["courses"]=courses;
 
 		if(userType=="student")
 		{
@@ -79,6 +97,9 @@ exports.login = function(req, res)
 		status["loginStatus"]["name"]="";
 		status["loginStatus"]["username"]="";
 		status["loginStatus"]["userType"]="";
+		status["loginStatus"]["image"]="";
+		status["loginStatus"]["friends"]=[];
+		status["loginStatus"]["courses"]=[];
 
 		res.render('index', status);
 	}

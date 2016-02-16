@@ -107,3 +107,8 @@ body {
 .mainButton{
     text-align: center;
 }
+
+#proPic{
+  max-width: 20%;
+  max-height: 25%;
+}

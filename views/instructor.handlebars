@@ -7,38 +7,40 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 <link href="css/introHCI.css" rel="stylesheet">
-    <body>
-      <div class="container">
-        <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
-        <!-- p means paragraph -->
-        <div class="jumbotron">
-          <h1>Welcome {{loginStatus.name}}!</h1>
-          <h2>Instructor</h2>
+<body>
+  <div class="container">
+    <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+    <!-- p means paragraph -->
+    <div class="jumbotron">
+      <h1>Welcome {{loginStatus.name}}!</h1>
+      <h2>Instructor</h2>
+      <h3>Logged in as {{loginStatus.username}}</h3>
+      <img src={{loginStatus.image}} alt="profilePic" id="proPic">
 
-          <a href="/logout"><button id="testjs" class="btn btn-primary btn-lg">Logout</button></a>
-        </div>
+      <a href="/logout"><button id="testjs" class="btn btn-primary btn-lg">Logout</button></a>
+    </div>
 
     
 
-        <!--  this is topic section -->
-        <div class="TopicHeader">
-          <h4>Class/Subject</h4>
-        </div>
+    <!--  this is topic section -->
+    <div class="TopicHeader">
+      <h4>Class/Subject</h4>
+    </div>
 
 
-        <div class="Topic" id="project2">
-          <a href="" class="thumbnail">
-            <button id="courseBtn1" type="button" class="btn btn-default">MATH 10A</button> <br>
-            <button id="courseBtn2" type="button" class="btn btn-default">BILD 1</button>
-          </a>
-        </div>
+    <div class="Topic" id="project2">
+      <a href="" class="thumbnail">
+        <button id="courseBtn1" type="button" class="btn btn-default">MATH 10A</button> <br>
+        <button id="courseBtn2" type="button" class="btn btn-default">BILD 1</button>
+      </a>
+    </div>
 
 
 
 
-      </div>
+  </div>
 
-      <form id="projectForm" role="form">
+  <form id="projectForm" role="form">
     <!--<div class="form-group">
       <label for="project">Friend's name(last, first)</label>
       <select class="form-control" id="project">

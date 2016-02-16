@@ -5,6 +5,13 @@
 		"name": "",
 		"username": "",
 		"userType": "",
-		"invalid": ""
+		"invalid": "",
+		"image": "/images/user.png",
+		"friends":
+		[
+		],
+		"courses":
+		[
+		]
 	}
 }

@@ -12,6 +12,6 @@ var course=status["loginStatus"]["currentCourseID"];
 	}
 	else
 	{
-		res.render('createQuiz', {status, questions});	
+		res.render('createQuiz', {"status": status, "questions": questions});	
 	}
 };

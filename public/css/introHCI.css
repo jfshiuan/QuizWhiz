@@ -23,6 +23,10 @@ body {
     color:white;
 }
 
+.centered{
+  text-align: center;
+}
+
 .jumbotron {
 	position: relative;
 	background: none;

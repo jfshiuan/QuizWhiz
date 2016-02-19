@@ -1,0 +1,22 @@
+{
+		"course": 
+		[
+			{
+				"courseName": "",
+				"courseID": "",
+				"problems":
+				[
+					{
+						"problemID": "",
+						"question": "",
+						"possibleAnswers":
+						[
+						""
+						],
+						"correctAnswer": ""
+					}
+				]
+			}
+
+		]
+}

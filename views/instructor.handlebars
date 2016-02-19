@@ -18,6 +18,7 @@
       <h1>Welcome {{loginStatus.name}}!</h1>
       <h2>Instructor</h2>
       <h3>Logged in as {{loginStatus.username}}</h3>
+      <h3>Current Course: {{loginStatus.currentCourseID}} {{loginStatus.currentCourseName}}</h3>
       <img src={{loginStatus.image}} alt="profilePic" id="proPic">
 
       <a href="/logout"><button id="testjs" class="btn btn-primary btn-lg">Logout</button></a>
@@ -25,48 +26,38 @@
 
     
 
-    <!--  this is topic section -->
-    <div class="TopicHeader">
-      <h4>Class/Subject</h4>
-    </div>
 
 
+    <div class="container"> 
 
-    <div class="container">                                          
-      <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Choose course:
-          <span class="caret"></span></button>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-            {{#each loginStatus.courses}}
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">{{courseID}}: {{courseName}}</a></li>
-            {{/each}}
-          </ul>
+      <!-- Codrops top bar -->
+
+      <section class="main clearfix">
+
+        <div class="fleft">
+          <form action="/selectCourse" method="post">
+
+            <select name="courseDropdown" id="cd-dropdown" class="cd-select">
+              <option value=-1 selected>Choose course:</option>
+              {{#each loginStatus.courses}}
+              <option value="{{courseID}}" >{{courseID}}: {{courseName}}</option>
+              {{/each}}
+
+            </select>
+            <div class="mainButton">
+              <button type="submit" class="btn btn-default centered">Select Course</button>
+            </div>
+          </form>
+
         </div>
-      </div>
+      </section>
+
+    </div><!-- /container -->
 
 
-  <div class="container"> 
-    <!-- Codrops top bar -->
+  </div>
 
-    <section class="main clearfix">
-
-      <div class="fleft">
-        <select id="cd-dropdown" class="cd-select">
-
-          <option value="-1" selected>Choose course:</option>
-          {{#each loginStatus.courses}}
-          <option value="1">{{courseID}}: {{courseName}}</option>
-          {{/each}}
-        </select>
-      </div>
-    </section>
-  </div><!-- /container -->
-
-
-
-    </div>
-
-    <form id="projectForm" role="form">
+  <form id="projectForm" role="form">
     <!--<div class="form-group">
       <label for="project">Friend's name(last, first)</label>
       <select class="form-control" id="project">
@@ -75,6 +66,7 @@
       </select>
     </div>
     <![endif]-->  
+    <br>
     <div class="mainButton">
       <a href="/createQuiz"><button id="Create Quiz" type="button" class="btn btn-default">Create Quiz</button></a>
       <hr>
@@ -97,9 +89,9 @@
 
 
   <script src="https://code.jquery.com/jquery.js"></script>
+
   <script src="js/bootstrap.min.js"></script>
   <script src="js/introHCI.js"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery.dropdown.js"></script>
   <script type="text/javascript">
 

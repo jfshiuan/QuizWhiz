@@ -100,6 +100,8 @@ exports.login = function(req, res)
 		status["loginStatus"]["image"]="";
 		status["loginStatus"]["friends"]=[];
 		status["loginStatus"]["courses"]=[];
+		status["loginStatus"]["currentCourseID"]="";
+		status["loginStatus"]["currentCourseName"]="";
 
 		res.render('index', status);
 	}

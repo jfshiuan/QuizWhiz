@@ -6,7 +6,7 @@
  var express = require('express');
  var http = require('http');
  var path = require('path');
- var handlebars = require('express3-handlebars')
+ var handlebars = require('express3-handlebars');
 
 
  var index = require('./routes/index');
@@ -23,6 +23,7 @@
  var student = require('./routes/student');
   var instructor = require('./routes/instructor');
   var selectCourse = require('./routes/selectCourse');
+  var getData = require('./routes/getData');
 
 //var palette = require('./routes/palette');
 // Example route
@@ -50,6 +51,8 @@ if ('development' == app.get('env')) {
 	app.use(express.errorHandler());
 }
 
+
+
 // Add routes here
 app.get('/', index.view);
 app.get('/login', login.login);
@@ -66,6 +69,7 @@ app.get('/instructor', instructor.view);
 app.get('/home', home.home);
 app.get('/getLoginData', login.getLoginData);
 app.post('/selectCourse', selectCourse.selectCourse);
+app.get('/getSelectedCourse', getData.getSelectedCourse);
 
 //app.get('/project/:id', project.projectInfo);
 //app.get('/palette', palette.randomPalette)

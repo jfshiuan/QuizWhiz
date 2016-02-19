@@ -1,10 +1,13 @@
 'use strict';
 var tempForm;
+var selectedCourse;
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
 })
+
+
 
 /*
  * Function that is called when the document is ready.
@@ -13,10 +16,45 @@ $(document).ready(function() {
 	//$('.project a').click(addProjectDetails);
 	//$('#loginBtn').click(login);
 	$('#toggleClick').click(toggleSignup);
+	//$('#instructorActionBtn').click(checkSelectedCourse);
 
 }
 
+function updateSelectedCourse(e)
+{
+	window.selectedCourse=e.courseDropdown.value;
+	if (window.selectedCourse==-1)
+	{
+		alert("Please select a course.");
+		selectedCourse="";
+		return false
+	}
+	console.log(window.selectedCourse);
+	return true;
+}
 
+
+function checkSelectedCourse(e)
+{
+	$.get('/getSelectedCourse', checkCourse);
+}
+
+
+function checkCourse(result)
+{
+	var selectedCourse=result;
+	if (selectedCourse=="" || selectedCourse==-1 || selectedCourse==undefined)
+	{
+		alert("Please select a course first.");
+		return false;
+	}
+	return true;
+}
+
+function checkQuestions(form)
+{
+
+}
 
 function checkSignup(form)
 {

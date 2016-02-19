@@ -28,34 +28,33 @@
 
 
 
-          <form action="/selectCourse" method="post">
+    <form action="/selectCourse" method="post" onSubmit="return updateSelectedCourse(this)">
 
-            <select name="courseDropdown" id="cd-dropdown" class="cd-select">
-              <option value=-1 selected>Choose course:</option>
-              {{#each loginStatus.courses}}
-              <option value="{{courseID}}" >{{courseID}}: {{courseName}}</option>
-              {{/each}}
+      <select name="courseDropdown" id="cd-dropdown" class="cd-select">
+        <option value=-1 selected>Choose course:</option>
+        {{#each loginStatus.courses}}
+        <option value="{{courseID}}" >{{courseID}}: {{courseName}}</option>
+        {{/each}}
 
-            </select>
-            <div class="mainButton">
-              <button type="submit" class="btn btn-default centered">Select Course</button>
-            </div>
-          </form>
+      </select>
+      <div class="mainButton">
+        <button type="submit" class="btn btn-default centered">Select Course</button>
+      </div>
 
-<hr>
+      <hr>
+      <br>
 
+      <div class="mainButton">
+        <a href="/createQuiz" ><button id="instructorActionBtn" onClick="return checkSelectedCourse()" type="button" class="btn btn-default">Create Quiz</button></a>
+        <br><br>
+        <a href="/classStats"><button id="instructorActionBtn" type="button" class="btn btn-default">Class Stats</button></a>
+        <br>
+        <br>
+        <a href="/studentStats"><button id="instructorActionBtn" type="button" class="btn btn-default">Student Stats</button></a>
 
-    <br>
+      </div>
+    </form>
 
-        <div class="mainButton">
-          <a href="/createQuiz"><button id="Create Quiz" type="button" class="btn btn-default">Create Quiz</button></a>
-          <br><br>
-          <a href="/classStats"><button id="Class Stats" type="button" class="btn btn-default">Class Stats</button></a>
-          <br>
-          <br>
-          <a href="/studentStats"><button id="Student Stats" type="button" class="btn btn-default">Student Stats</button></a>
-
-        </div>
 
 
     <div class="help">

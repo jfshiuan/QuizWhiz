@@ -40,6 +40,13 @@ exports.selectCourse = function(req, res)
 
 
 	status["loginStatus"]["currentCourseName"] = courseName;
-	res.render('instructor', status);
 
+	if(status["loginStatus"]["userType"]=="instructor")
+	{
+		res.render('instructor', status);
+	}
+	else
+	{
+		res.render('student', status);
+	}
 };

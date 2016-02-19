@@ -29,9 +29,23 @@
 
       
 
+{{#each qs}}
+<h2>{{question}}</h2> <br>
+{{#each possibleAnswers}}
+<h3>{{this}}</h3> <br>
+{{/each}}
+  <form id="addQuestions" role="form" method="get"  action="/student">
 
 
+          <input type="radio" id = "correctAnswer" name="correctAnswer" value="A" checked=true> A
+          <input type="radio" id = "correctAnswer" name="correctAnswer" value="B"> B
+          <input type="radio" id = "correctAnswer" name="correctAnswer" value="C"> C
+          <input type="radio" id = "correctAnswer" name="correctAnswer" value="D"> D
+<br>
+          <input type="submit" id="submitAnswer" class="btn btn-default" value="Submit Answer"></input>
+        </form>
 
+{{/each}}
 
     </div>
 

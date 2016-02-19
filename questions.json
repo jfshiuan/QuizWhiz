@@ -15,7 +15,25 @@
 						"correctAnswer": ""
 					}
 				]
-			}
+			},
 
+			{
+				"courseID": "DJK 101B",
+				"problems":
+				[
+					{
+						"problemID": "1",
+						"question": "Say my name.",
+						"possibleAnswers":
+						[
+						"DJ Khaled",
+						"Batman",
+						"Donald Trump",
+						"Bob"
+						],
+						"correctAnswer": "A"
+					}
+				]
+			}
 		]
 }

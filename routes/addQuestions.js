@@ -15,7 +15,7 @@ exports.addQuestions=function(req, res)
 
 	if(quest=="" || choiceA == "" || choiceB =="")
 	{
-		res.render('createQuiz', {status, questions});
+		res.render('createQuiz', {"status": status, "questions": questions});	
 	}
 	else
 	{

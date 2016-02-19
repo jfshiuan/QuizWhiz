@@ -17,7 +17,7 @@
 		{
 			"username": "DJ Khaled",
 			"password": "We Da Best!",
-			"name": "Khaled Mohamed Khaled",
+			"name": "Khaled",
 			"type:": "student",
 			"image": "/images/khaled.jpg",
 			"friends":
@@ -56,7 +56,7 @@
 		{
 			"username": "DJ Khaled 2",
 			"password": "Another One",
-			"name": "Khaled Mohamed Khaled",
+			"name": "Khaled",
 			"image": "/images/khaled2.jpg",
 			"type": "instructor",
 			"friends":

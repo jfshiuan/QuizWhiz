@@ -18,7 +18,7 @@
       <h1>Welcome {{loginStatus.name}}!</h1>
       <h2>Instructor</h2>
       <h3>Logged in as {{loginStatus.username}}</h3>
-      <h3>Current Course: {{loginStatus.currentCourseID}} {{loginStatus.currentCourseName}}</h3>
+      <p>Current Course: {{loginStatus.currentCourseID}} {{loginStatus.currentCourseName}}</p>
       <img src={{loginStatus.image}} alt="profilePic" id="proPic">
 
       <a href="/logout"><button id="testjs" class="btn btn-primary btn-lg">Logout</button></a>
@@ -28,13 +28,6 @@
 
 
 
-    <div class="container"> 
-
-      <!-- Codrops top bar -->
-
-      <section class="main clearfix">
-
-        <div class="fleft">
           <form action="/selectCourse" method="post">
 
             <select name="courseDropdown" id="cd-dropdown" class="cd-select">
@@ -49,39 +42,29 @@
             </div>
           </form>
 
-        </div>
-      </section>
-
-    </div><!-- /container -->
+<hr>
 
 
-  </div>
-
-  <form id="projectForm" role="form">
-    <!--<div class="form-group">
-      <label for="project">Friend's name(last, first)</label>
-      <select class="form-control" id="project">
-        <option value="#project1"></option>
- 
-      </select>
-    </div>
-    <![endif]-->  
     <br>
-    <div class="mainButton">
-      <a href="/createQuiz"><button id="Create Quiz" type="button" class="btn btn-default">Create Quiz</button></a>
-      <hr>
-      <a href="/classStats"><button id="Class Stats" type="button" class="btn btn-default">Class Stats</button></a>
-      <hr>
-      <a href="/studentStats"><button id="Student Stats" type="button" class="btn btn-default">Student Stats</button></a>
 
-    </div>
+        <div class="mainButton">
+          <a href="/createQuiz"><button id="Create Quiz" type="button" class="btn btn-default">Create Quiz</button></a>
+          <br><br>
+          <a href="/classStats"><button id="Class Stats" type="button" class="btn btn-default">Class Stats</button></a>
+          <br>
+          <br>
+          <a href="/studentStats"><button id="Student Stats" type="button" class="btn btn-default">Student Stats</button></a>
+
+        </div>
+
 
     <div class="help">
       <a href="/help"><button id="helpBtn" type="button" class="btn btn-default">?</button></a>
     </div>
-  </form>
 
 
+
+  </div>
 
 
 

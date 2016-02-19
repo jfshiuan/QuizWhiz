@@ -24,6 +24,7 @@
   var instructor = require('./routes/instructor');
   var selectCourse = require('./routes/selectCourse');
   var getData = require('./routes/getData');
+  var addQuestions = require('./routes/addQuestions');
 
 //var palette = require('./routes/palette');
 // Example route
@@ -70,6 +71,7 @@ app.get('/home', home.home);
 app.get('/getLoginData', login.getLoginData);
 app.post('/selectCourse', selectCourse.selectCourse);
 app.get('/getSelectedCourse', getData.getSelectedCourse);
+app.get('/addQuestions', addQuestions.addQuestions);
 
 //app.get('/project/:id', project.projectInfo);
 //app.get('/palette', palette.randomPalette)

@@ -53,7 +53,25 @@ function checkCourse(result)
 
 function checkQuestions(form)
 {
-
+	if(form.question.value == "")
+	{
+		alert("Error: Question cannot be blank!");
+		form.question.focus();
+		return false;
+	}
+	if(form.choiceA.value == "")
+	{
+		alert("Error: Answer choice A cannot be blank!");
+		form.choiceA.focus();
+		return false;
+	}
+	if(form.choiceB.value == "")
+	{
+		alert("Error: Answer choice B cannot be blank!");
+		form.choiceB.focus();
+		return false;
+	}
+	return true;
 }
 
 function checkSignup(form)

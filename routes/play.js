@@ -42,7 +42,7 @@ console.log(attrValue);
 
 		}
 
-		res.render('play', {status, qs});
+		res.render('play', {"status": status, "qs":qs});
 	}
 
 

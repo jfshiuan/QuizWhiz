@@ -38,51 +38,48 @@
 
       </select>
       <div class="mainButton">
-        <button type="submit" class="btn btn-default centered">Select Course</button>
-      </div>
+       <button type="submit" id="instructorActionBtn" onClick="return selectAction('createQuiz')" type="button" class="btn btn-default">Create Quiz</button>
+       
+       <button type="submit" id="instructorActionBtn" onClick="return selectAction('classStats')" type="button" class="btn btn-default">Class Stats</button>
+       
+       <button type="submit" id="instructorActionBtn" onClick="return selectAction('studentStats')" type="button" class="btn btn-default">Student Stats</button>
 
-      <hr>
-      <br>
+     </div>
 
-      <div class="mainButton">
-        <a href="/createQuiz" ><button id="instructorActionBtn" onClick="return checkSelectedCourse()" type="button" class="btn btn-default">Create Quiz</button></a>
-        <br><br>
-        <a href="/classStats"><button id="instructorActionBtn" type="button" class="btn btn-default">Class Stats</button></a>
-        <br>
-        <br>
-        <a href="/studentStats"><button id="instructorActionBtn" type="button" class="btn btn-default">Student Stats</button></a>
+     <hr>
+     <br>
 
-      </div>
-    </form>
+
+   </form>
 
 
 
-    <div class="help">
-      <a href="/help"><button id="helpBtn" type="button" class="btn btn-default">?</button></a>
-    </div>
-
-
-
+   <div class="help">
+    <a href="/help"><button id="helpBtn" type="button" class="btn btn-default">?</button></a>
   </div>
 
 
 
+</div>
 
 
 
-  <script src="https://code.jquery.com/jquery.js"></script>
 
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/introHCI.js"></script>
-  <script type="text/javascript" src="js/jquery.dropdown.js"></script>
-  <script type="text/javascript">
 
-  $( function() {
 
-    $( '#cd-dropdown' ).dropdown();
+<script src="https://code.jquery.com/jquery.js"></script>
 
-  });
+<script src="js/bootstrap.min.js"></script>
+<script src="js/introHCI.js"></script>
+<script type="text/javascript" src="js/jquery.dropdown.js"></script>
+<script type="text/javascript">
 
-  </script>
+$( function() {
+
+  $( '#cd-dropdown' ).dropdown();
+
+});
+
+</script>
 </body>
 </html>

@@ -11,7 +11,7 @@
 
  var index = require('./routes/index');
  var login = require('./routes/login');
-  var logout = require('./routes/logout');
+ var logout = require('./routes/logout');
  var signup = require('./routes/signup');
  var help = require('./routes/help');
  var home = require('./routes/home');
@@ -21,10 +21,10 @@
  var classStats = require('./routes/classStats');
  var studentStats = require('./routes/studentStats');
  var student = require('./routes/student');
-  var instructor = require('./routes/instructor');
-  var selectCourse = require('./routes/selectCourse');
-  var getData = require('./routes/getData');
-  var addQuestions = require('./routes/addQuestions');
+ var instructor = require('./routes/instructor');
+ var selectCourse = require('./routes/selectCourse');
+ var getData = require('./routes/getData');
+ var addQuestions = require('./routes/addQuestions');
 
 //var palette = require('./routes/palette');
 // Example route
@@ -72,6 +72,7 @@ app.get('/getLoginData', login.getLoginData);
 app.post('/selectCourse', selectCourse.selectCourse);
 app.get('/getSelectedCourse', getData.getSelectedCourse);
 app.get('/addQuestions', addQuestions.addQuestions);
+app.post('/selectAction', selectCourse.selectAction);
 
 //app.get('/project/:id', project.projectInfo);
 //app.get('/palette', palette.randomPalette)

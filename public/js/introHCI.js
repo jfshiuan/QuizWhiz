@@ -27,13 +27,17 @@ function updateSelectedCourse(e)
 	{
 		alert("Please select a course.");
 		selectedCourse="";
-		return false
+		return false;
 	}
-	console.log(window.selectedCourse);
 	return true;
 }
 
+function selectAction(e)
+{
+	$.post('/selectAction', {action: e})
+}
 
+/*
 function checkSelectedCourse(e)
 {
 	$.get('/getSelectedCourse', checkCourse);
@@ -49,7 +53,7 @@ function checkCourse(result)
 		return false;
 	}
 	return true;
-}
+}*/
 
 function checkQuestions(form)
 {

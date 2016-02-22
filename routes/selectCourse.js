@@ -1,6 +1,7 @@
 var userData = require("../userData.json");
 var status = require("../status.json");
 var courses = require("../courses.json");
+var questions = require("../questions.json");
 
 exports.selectCourse = function(req, res)
 {  
@@ -41,12 +42,34 @@ exports.selectCourse = function(req, res)
 
 	status["loginStatus"]["currentCourseName"] = courseName;
 
-	if(status["loginStatus"]["userType"]=="instructor")
+	if(status["loginStatus"]["action"]=="")
 	{
-		res.render('instructor', status);
+		if(status["loginStatus"]["userType"]=="instructor")
+		{
+			res.render('instructor', status);
+		}
+		else
+		{
+			res.render('student', status);
+		}
 	}
-	else
+
+	else if(status["loginStatus"]["action"]=="createQuiz")
 	{
-		res.render('student', status);
+		res.render('createQuiz', {"status": status, "questions": questions});	
 	}
+	else if(status["loginStatus"]["action"]=="classStats")
+	{
+		res.render('classStats', {"status": status, "questions": questions});	
+	}
+	else if(status["loginStatus"]["action"]=="studentStats")
+	{
+		res.render('studentStats', {"status": status, "questions": questions});	
+	}
+};
+
+
+exports.selectAction = function(req, res)
+{
+	status["loginStatus"]["action"]=req.body.action;
 };

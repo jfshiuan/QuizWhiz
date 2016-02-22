@@ -102,7 +102,8 @@ exports.login = function(req, res)
 		status["loginStatus"]["courses"]=[];
 		status["loginStatus"]["currentCourseID"]="";
 		status["loginStatus"]["currentCourseName"]="";
-
+		status["loginStatus"]["action"]="";
+		
 		res.render('index', status);
 	}
 

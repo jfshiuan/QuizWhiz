@@ -66,6 +66,15 @@ exports.selectCourse = function(req, res)
 	{
 		res.render('studentStats', {"status": status, "questions": questions});	
 	}
+	else if(status["loginStatus"]["action"]=="play")
+	{
+		res.redirect('/play');
+	}
+	else if(status["loginStatus"]["action"]=="myStats")
+	{
+		res.render('myStats', status);	
+	}
+
 };
 
 

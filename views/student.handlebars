@@ -18,14 +18,24 @@
    <h2>Student</h2>
    <h3>Logged in as {{loginStatus.username}}</h3>
    <p>Current Course: {{loginStatus.currentCourseID}} {{loginStatus.currentCourseName}}</p>
-   <img src={{loginStatus.image}} alt="profilePic" id="proPic">
-
-   <a href="/logout"><button id="testjs" class="btn btn-primary btn-lg">Logout</button></a>
- </div>
+   <img src={{loginStatus.image}} onclick="changeProfilePicture()" alt="profilePic" id="proPic">
 
 
 
- <form action="/selectCourse" method="post" onSubmit="return updateSelectedCourse(this)">
+
+
+
+
+
+
+
+
+  <a href="/logout"><button id="testjs" class="btn btn-primary btn-lg">Logout</button></a>
+</div>
+
+
+
+<form action="/selectCourse" method="post" onSubmit="return updateSelectedCourse(this)">
 
   <select name="courseDropdown" id="cd-dropdown" class="cd-select">
     <option value=-1 selected>Choose course:</option>
@@ -36,10 +46,10 @@
   </select>
   <div class="mainButton">
     <button type="submit" onClick="return selectAction('play')" type="button" class="btn btn-default">Play</button>
-   <button type="submit"  onClick="return selectAction('myStats')" type="button" class="btn btn-default">My Stats</button>
- </div>
- <hr>
- <br>
+    <button type="submit"  onClick="return selectAction('myStats')" type="button" class="btn btn-default">My Stats</button>
+  </div>
+  <hr>
+  <br>
 
 
 </form>

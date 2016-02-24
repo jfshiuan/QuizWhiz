@@ -20,6 +20,16 @@ $(document).ready(function() {
 
 }
 
+
+
+function changeProfilePicture(e)
+{
+	var proPic = prompt("Enter URL of new image:", "");
+	$.post('/changeProfilePicture', {profilePictureURL: proPic});
+window.location.reload();
+}
+
+
 function updateSelectedCourse(e)
 {
 	window.selectedCourse=e.courseDropdown.value;
@@ -34,7 +44,7 @@ function updateSelectedCourse(e)
 
 function selectAction(e)
 {
-	$.post('/selectAction', {action: e})
+	$.post('/selectAction', {action: e});
 }
 
 /*

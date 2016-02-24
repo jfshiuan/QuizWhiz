@@ -17,10 +17,15 @@ $(document).ready(function() {
 	//$('#loginBtn').click(login);
 	$('#toggleClick').click(toggleSignup);
 	//$('#instructorActionBtn').click(checkSelectedCourse);
-
+	$('#proPic').error(invalidImageError);
 }
 
-
+function invalidImageError(e)
+{
+	alert('Image URL invalid.');	
+	$.post('/changeProfilePicture', {profilePictureURL: "/images/user.png"});
+	window.location.reload();
+}
 
 function changeProfilePicture(e)
 {

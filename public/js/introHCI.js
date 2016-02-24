@@ -26,7 +26,7 @@ function changeProfilePicture(e)
 {
 	var proPic = prompt("Enter URL of new image:", "");
 	$.post('/changeProfilePicture', {profilePictureURL: proPic});
-window.location.reload();
+	window.location.reload();
 }
 
 
@@ -223,6 +223,7 @@ function checkLoginDetails(result)
 	var password = tempForm.password.value;
 	var usernameExists = false;
 
+
 	for(var i=0;i<result.length;i++)
 	{
 		var obj = result[i];
@@ -244,6 +245,7 @@ function checkLoginDetails(result)
 
 		if(uname == username)
 		{
+
 			usernameExists=true;
 
 			if(pw != password)
@@ -253,7 +255,7 @@ function checkLoginDetails(result)
 				return false;
 			}
 		}
-		return true;
+
 	}
 
 
@@ -263,6 +265,7 @@ function checkLoginDetails(result)
 		tempForm.username.focus();
 		return false;
 	}
+	return true;
 }
 
 
@@ -284,7 +287,5 @@ function toggleSignup(e)
 	{
 		elem.value = "Sign Up Instead";
 	}
-//var text = $('#toggleBtn').find("button");
-//console.log(text);
 }
 

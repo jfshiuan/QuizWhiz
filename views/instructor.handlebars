@@ -16,8 +16,9 @@
   <nav class="navbar navbar-inverse navbar-fixed-top" id="nav">
     <div class="container-fluid">
       <a class="glyphicon glyphicon-home navbar-brand navbar-left" href="/home"> Home</a>
-      <a class="glyphicon glyphicon-info-sign navbar-brand navbar-right" href="/help"> Help</a>
-      <a class="glyphicon glyphicon-log-out navbar-brand navbar-right" href="/logout"> Logout</a>
+      <a class="glyphicon glyphicon-info-sign navbar-brand navbar-left" href="/help"> Help</a>
+      <a class="glyphicon glyphicon-log-out navbar-brand navbar-left" href="/logout"> Logout</a>
+      <span class = "glyphicon glyphicon-user navbar-brand navbar-right"> {{loginStatus.username}}</span>
     </div>
   </nav>
 
@@ -35,7 +36,7 @@
 
     </div>
 
-    
+
 
 
 
@@ -50,9 +51,9 @@
       </select>
       <div class="mainButton">
        <button type="submit" id="instructorActionBtn" onClick="return selectAction('createQuiz')" type="button" class="btn btn-default">Create Quiz</button>
-       
+
        <button type="submit" id="instructorActionBtn" onClick="return selectAction('classStats')" type="button" class="btn btn-default">Class Stats</button>
-       
+
        <button type="submit" id="instructorActionBtn" onClick="return selectAction('studentStats')" type="button" class="btn btn-default">Student Stats</button>
 
      </div>
@@ -66,26 +67,26 @@
 
 
 
-</div>
+ </div>
 
 
 
 
 
 
-<script src="https://code.jquery.com/jquery.js"></script>
+ <script src="https://code.jquery.com/jquery.js"></script>
 
-<script src="js/bootstrap.min.js"></script>
-<script src="js/introHCI.js"></script>
-<script type="text/javascript" src="js/jquery.dropdown.js"></script>
-<script type="text/javascript">
+ <script src="js/bootstrap.min.js"></script>
+ <script src="js/introHCI.js"></script>
+ <script type="text/javascript" src="js/jquery.dropdown.js"></script>
+ <script type="text/javascript">
 
-$( function() {
+ $( function() {
 
   $( '#cd-dropdown' ).dropdown();
 
 });
 
-</script>
+ </script>
 </body>
 </html>

@@ -15,8 +15,9 @@
   <nav class="navbar navbar-inverse navbar-fixed-top" id="nav">
     <div class="container-fluid">
       <a class="glyphicon glyphicon-home navbar-brand navbar-left" href="/home"> Home</a>
-      <a class="glyphicon glyphicon-info-sign navbar-brand navbar-right" href="/help"> Help</a>
-      <a class="glyphicon glyphicon-log-out navbar-brand navbar-right" href="/logout"> Logout</a>
+      <a class="glyphicon glyphicon-info-sign navbar-brand navbar-left" href="/help"> Help</a>
+      <a class="glyphicon glyphicon-log-out navbar-brand navbar-left" href="/logout"> Logout</a>
+      <span class = "glyphicon glyphicon-user navbar-brand navbar-right"> {{loginStatus.username}}</span>
     </div>
   </nav>
 
@@ -27,8 +28,7 @@
     <!-- p means paragraph -->
     <div class="jumbotron">
      <h1>Welcome {{loginStatus.name}}!</h1>
-     <h2>Student</h2>
-     <h3>Logged in as {{loginStatus.username}}</h3>
+
 
      <img src={{loginStatus.image}} onclick="changeProfilePicture()" alt="profilePic" class="proPic">
 

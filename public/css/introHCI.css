@@ -91,6 +91,7 @@ body {
   color:white;
   text-align: center;
   background-color: transparent;
+    cursor: pointer;
 }
 
 #signupForm{
@@ -117,3 +118,9 @@ body {
   max-height: 25%;
   cursor: pointer;
 }
+@media (min-width: 1200px) {
+    .container{
+        max-width: 970px;
+    }
+}
+

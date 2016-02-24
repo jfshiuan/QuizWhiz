@@ -11,6 +11,17 @@
 <link rel="stylesheet" type="text/css" href="css/style4.css" />
 <script src="js/modernizr.custom.63321.js"></script>
 <body>
+
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="nav">
+    <div class="container-fluid">
+      <a class="glyphicon glyphicon-home navbar-brand navbar-left" href="/home"> Home</a>
+      <a class="glyphicon glyphicon-info-sign navbar-brand navbar-right" href="/help"> Help</a>
+      <a class="glyphicon glyphicon-log-out navbar-brand navbar-right" href="/logout"> Logout</a>
+    </div>
+  </nav>
+
+
   <div class="container">
     <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
     <!-- p means paragraph -->
@@ -21,7 +32,7 @@
 
       <img src={{loginStatus.image}} onclick="changeProfilePicture()" alt="profilePic" class="proPic">
 
-      <a href="/logout"><button id="testjs" class="btn btn-primary btn-lg">Logout</button></a>
+
     </div>
 
     
@@ -52,11 +63,6 @@
 
    </form>
 
-
-
-   <div class="help">
-    <a href="/help"><button id="helpBtn" type="button" class="btn btn-default">?</button></a>
-  </div>
 
 
 

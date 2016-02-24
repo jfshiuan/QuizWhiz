@@ -18,8 +18,8 @@
       <h1>Welcome {{loginStatus.name}}!</h1>
       <h2>Instructor</h2>
       <h3>Logged in as {{loginStatus.username}}</h3>
-      <p>Current Course: {{loginStatus.currentCourseID}} {{loginStatus.currentCourseName}}</p>
-      <img src={{loginStatus.image}} alt="profilePic" id="proPic">
+
+      <img src={{loginStatus.image}} onclick="changeProfilePicture()" alt="profilePic" class="proPic">
 
       <a href="/logout"><button id="testjs" class="btn btn-primary btn-lg">Logout</button></a>
     </div>

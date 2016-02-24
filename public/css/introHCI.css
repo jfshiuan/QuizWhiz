@@ -112,7 +112,7 @@ body {
   text-align: center;
 }
 
-#proPic{
+.proPic{
   max-width: 20%;
   max-height: 25%;
   cursor: pointer;

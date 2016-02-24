@@ -17,7 +17,7 @@ $(document).ready(function() {
 	//$('#loginBtn').click(login);
 	$('#toggleClick').click(toggleSignup);
 	//$('#instructorActionBtn').click(checkSelectedCourse);
-	$('#proPic').error(invalidImageError);
+	$('.proPic').error(invalidImageError);
 }
 
 function invalidImageError(e)

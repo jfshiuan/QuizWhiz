@@ -91,7 +91,7 @@ body {
   color:#B3DBE8;
   text-align: center;
   background-color: transparent;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #signupForm{
@@ -119,16 +119,27 @@ body {
   cursor: pointer;
 }
 @media (min-width: 1200px) {
-    .container{
-        max-width: 970px;
-    }
+  .container{
+    max-width: 970px;
+  }
 }
 
 .glyphicon {
+  margin-left: 0px;
   margin-right: 0px;
   vertical-align: middle;
   letter-spacing: 0px;
-white-space: nowrap;
-word-spacing: -10px;
+  white-space: nowrap;
+  word-spacing: -15px;
+  font-size: 120%;
 }
 
+.helpText{
+  font-size: 20px;
+}
+
+
+.helpSection{
+  font-weight: bolder;
+  color:#B3DBE8;
+}

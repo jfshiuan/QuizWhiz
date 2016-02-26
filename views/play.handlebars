@@ -50,25 +50,22 @@
         <br>     
         <div class="t1">	<h1>Play</h1></div>
 
-        
-        
+
+
 
         {{#each qs}}
         <h2>{{question}}</h2> <br>
-        {{#each possibleAnswers}}
-        <h3>{{this}}</h3> <br>
-        {{/each}}
-        <form id="addQuestions" role="form" method="get"  action="/student">
-
-
-          <input type="radio" id = "correctAnswer" name="correctAnswer" value="A" checked=true> A
-          <input type="radio" id = "correctAnswer" name="correctAnswer" value="B"> B
-          <input type="radio" id = "correctAnswer" name="correctAnswer" value="C"> C
-          <input type="radio" id = "correctAnswer" name="correctAnswer" value="D"> D
+        <form id="addQuestions" role="form">
+          {{#each possibleAnswers}}
+          <div class="studentAnswer"> <input type="radio"  id="studentAnswer" name="studentAnswer" value={{this}}> {{this}}</div>
           <br>
-          <input type="submit" id="submitAnswer" class="btn btn-default" value="Submit Answer"></input>
-        </form>
+          {{/each}}
 
+
+          <br>
+          <input type="submit" id="sendAnswer" class="btn btn-default" value="Submit Answer"></input>
+        </form>
+        <hr>
         {{/each}}
 
       </div>

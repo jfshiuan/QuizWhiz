@@ -26,6 +26,7 @@
  var getData = require('./routes/getData');
  var addQuestions = require('./routes/addQuestions');
  var updateData = require('./routes/updateData');
+ var checkAnswer=require('./routes/checkAnswer');
 
 //var palette = require('./routes/palette');
 // Example route
@@ -75,7 +76,8 @@ app.get('/getSelectedCourse', getData.getSelectedCourse);
 app.get('/addQuestions', addQuestions.addQuestions);
 app.post('/selectAction', selectCourse.selectAction);
 app.post('/changeProfilePicture', updateData.changeProfilePicture);
-
+app.post('/checkAnswer', checkAnswer.checkAnswer);
+app.post('/getCorrectAnswer', getData.getCorrectAnswer);
 //app.get('/project/:id', project.projectInfo);
 //app.get('/palette', palette.randomPalette)
 // Example route

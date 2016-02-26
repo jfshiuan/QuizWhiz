@@ -93,6 +93,20 @@ function checkQuestions(form)
 	return true;
 }
 
+function submitAnswer(form)
+{
+	var answer=form.studentAnswer.value;
+	alert(answer);
+	$.post('/getCorrectAnswer', {studentAnswer: answer}, checkAnswer);
+
+}
+
+function checkAnswer(result)
+{
+	alert(result);
+}
+
+
 function checkSignup(form)
 {
 

@@ -104,6 +104,7 @@ body {
 }
 
 .t1{
+  color:white;
   text-align: center;
   font-weight: bolder;
   font-variant: small-caps;
@@ -130,7 +131,7 @@ body {
   vertical-align: middle;
   letter-spacing: 0px;
   white-space: nowrap;
-  word-spacing: -15px;
+  word-spacing: -12px;
   font-size: 120%;
 }
 
@@ -143,3 +144,5 @@ body {
   font-weight: bolder;
   color:#B3DBE8;
 }
+
+

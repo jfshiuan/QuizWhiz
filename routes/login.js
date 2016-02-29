@@ -81,6 +81,9 @@ exports.login = function(req, res)
 		status["loginStatus"]["image"]=image;
 		status["loginStatus"]["friends"]=friends;
 		status["loginStatus"]["courses"]=courses;
+		status["loginStatus"]["questionNumber"]=0;
+		status["loginStatus"]["score"]=0;
+		status["loginStatus"]["totalScore"]=0;
 
 		if(userType=="student")
 		{
@@ -103,6 +106,9 @@ exports.login = function(req, res)
 		status["loginStatus"]["currentCourseID"]="";
 		status["loginStatus"]["currentCourseName"]="";
 		status["loginStatus"]["action"]="";
+		status["loginStatus"]["questionNumber"]=0;
+		status["loginStatus"]["score"]=0;
+		status["loginStatus"]["totalScore"]=0;
 		
 		res.render('index', status);
 	}

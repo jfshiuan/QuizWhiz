@@ -63,6 +63,7 @@ app.get('/logout', logout.logout);
 app.get('/signup', signup.signup);
 app.get('/help', help.help);
 app.get('/play', play.play);
+app.get('/submitAnswer', play.submitAnswer);
 app.get('/myStats', myStats.myStats);
 app.get('/createQuiz', createQuiz.createQuiz);
 app.get('/classStats', classStats.classStats);

@@ -15,6 +15,9 @@
 		],
 		"currentCourseID": "",
 		"currentCourseName": "",
-		"action": ""
+		"action": "",
+		"questionNumber": 0,
+		"score": 0,
+		"totalScore": 0
 	}
 }

@@ -53,11 +53,11 @@
 
 
 
-        {{#each qs}}
-        <h2>{{question}}</h2> <br>
-        <form id="addQuestions" role="form">
-          {{#each possibleAnswers}}
-          <div class="studentAnswer"> <input type="radio"  id="studentAnswer" name="studentAnswer" value={{this}}> {{this}}</div>
+       
+        <h2>{{qs.question}}</h2> <br>
+        <form role="form" action="/submitAnswer">
+          {{#each qs.possibleAnswers}}
+          <div class="studentAnswer"> <input type="radio"  id="studentAnswer" name="studentAnswer" value="{{this}}"> {{this}}</div>
           <br>
           {{/each}}
 
@@ -66,7 +66,7 @@
           <input type="submit" id="sendAnswer" class="btn btn-default" value="Submit Answer"></input>
         </form>
         <hr>
-        {{/each}}
+       
 
       </div>
 

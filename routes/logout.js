@@ -14,6 +14,9 @@ exports.logout = function(req, res)
 	status["loginStatus"]["currentCourseID"]="";
 	status["loginStatus"]["currentCourseName"]="";
 	status["loginStatus"]["action"]="";
+	status["loginStatus"]["questionNumber"]=0;
+	status["loginStatus"]["score"]=0;
+	status["loginStatus"]["totalScore"]=0;
 
 	res.render("index");
 };

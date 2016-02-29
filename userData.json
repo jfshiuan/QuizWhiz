@@ -37,19 +37,23 @@
 			[
 				{
 					"courseID": "DJK 100",
-					"courseName": "DJ Khaled"
+					"courseName": "DJ Khaled",
+					"bestScore": 0
 				},
 				{
 					"courseID": "DJK 101A",
-					"courseName": "We Takin' Over"
+					"courseName": "We Takin' Over",
+					"bestScore": 0
 				},
 				{
 					"courseID": "DJK 101B",
-					"courseName": "We Da Best"
+					"courseName": "We Da Best",
+					"bestScore": 0
 				},
 				{
 					"courseID": "DJK 101C",
-					"courseName": "Another One"
+					"courseName": "Another One",
+					"bestScore": 0
 				}
 			]
 		},

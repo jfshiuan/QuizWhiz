@@ -18,7 +18,7 @@
       <a class="glyphicon glyphicon-home navbar-brand navbar-left" href="/home"> Home</a>
       <a class="glyphicon glyphicon-info-sign navbar-brand navbar-left" href="/help"> Help</a>
       <a class="glyphicon glyphicon-log-out navbar-brand navbar-left" href="/logout"> Logout</a>
-      <span class = "glyphicon glyphicon-user navbar-brand navbar-right"> {{loginStatus.username}}</span>
+      <span class = "glyphicon glyphicon-user navbar-brand navbar-right"> {{status.loginStatus.username}}</span>
     </div>
   </nav>
 
@@ -40,7 +40,8 @@
     <!-- p means paragraph -->
     <div class="jumbotron">
      <h1>You Won!</h1>
-     <h2>You scored {{loginStatus.score}} out of {{loginStatus.totalScore}}</h2>
+     <h2>You scored {{status.loginStatus.score}} out of {{status.loginStatus.totalScore}}.</h2>
+      <h2>Your best score is {{bestScore}}.</h2>
    </div>
  </div>
 

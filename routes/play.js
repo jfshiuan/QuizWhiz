@@ -1,5 +1,6 @@
 var status = require("../status.json");
 var questions = require("../questions.json");
+var userData = require("../userData.json");
 
 exports.play = function(req, res)
 {  
@@ -103,7 +104,66 @@ exports.submitAnswer = function(req, res)
 
 		if(qs==undefined)
 		{
-			res.render('endOfMatch', status);
+			var newScore=status["loginStatus"]["score"];
+			var arr=userData["loginData"];
+			var username = status["loginStatus"]["username"];
+			var bestScore =newScore;
+			for(var i=0;i<arr.length;i++)
+			{
+				var obj = arr[i];
+				var uname, courses;
+				for(var key in obj)
+				{
+					var attrName = key;
+					var attrValue = obj[key];
+
+					if(attrName == "username")
+					{
+						uname=attrValue;
+					}
+					if(attrName == "courses")
+					{
+						courses=attrValue;
+					}
+				}
+
+				if(username==uname)
+				{
+					var arr=courses;
+
+					for(var i=0;i<arr.length;i++)
+					{
+						var obj = arr[i];
+						var cID;
+						for(var key in obj)
+						{
+							var attrName = key;
+							var attrValue = obj[key];
+
+							if(attrName == "courseID")
+							{
+								cID=attrValue;
+							}
+							if(attrName == "bestScore")
+							{
+								if(course==cID)
+								{
+									if(newScore>attrValue)
+									{
+										obj[key]=newScore;
+									}
+									else
+									{
+										bestScore=attrValue;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			res.render('endOfMatch', {"status": status, "bestScore": bestScore});
 		}
 		else
 		{
@@ -111,7 +171,4 @@ exports.submitAnswer = function(req, res)
 			res.render('play', {"status": status, "qs":qs});
 		}
 	}
-
-
-
-}
+};

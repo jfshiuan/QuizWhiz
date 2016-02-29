@@ -6,12 +6,11 @@ var status = require("../status.json");
 exports.getLoginData = function(req, res)
 {
 	res.json(userData['loginData']);
-}
+};
 
 
 exports.login = function(req, res)
 {  
-	
 	var username = req.query.username;
 	var password = req.query.password;
 

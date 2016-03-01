@@ -72,7 +72,7 @@ exports.selectCourse = function(req, res)
 	}
 	else if(status["loginStatus"]["action"]=="myStats")
 	{
-		res.render('myStats', status);	
+		res.redirect('/myStats');	
 	}
 
 };

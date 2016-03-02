@@ -49,5 +49,5 @@ exports.myStats = function(req, res)
 		}
 	}
 	console.log(course);
-	res.render('myStats', course);
+	res.render('myStats', {"status": status, "course": course});
 };

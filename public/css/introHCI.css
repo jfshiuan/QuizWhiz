@@ -151,14 +151,15 @@ body {
 }
 
 .userScore{
-   color:#B3DBFA; 
+ color:#B3DBFA; 
 }
 
 .opponentScore{
-   color:#FABDB3; 
+ color:#FABDB3; 
 }
 
 .bestScore h3{
   font-weight: lighter;
   font-size: 90%; 
 }
+

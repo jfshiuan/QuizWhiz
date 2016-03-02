@@ -109,6 +109,29 @@ exports.submitAnswer = function(req, res)
 			var arr=userData["loginData"];
 			var username = status["loginStatus"]["username"];
 			var bestScore =newScore;
+
+
+
+
+			var rand = Math.floor((Math.random() * (status["loginStatus"]["totalScore"]+1)));
+			console.log(rand);
+			status["loginStatus"]["opponentScore"]=rand;
+
+			if(newScore > rand)
+			{
+				status["loginStatus"]["result"]	= "You Won!";			
+			}
+			else if(newScore < rand)
+			{
+				status["loginStatus"]["result"]	= "You Lost!";			
+
+			}
+			else
+			{
+				status["loginStatus"]["result"]	= "It's a tie!";			
+			}
+
+
 			for(var i=0;i<arr.length;i++)
 			{
 				var obj = arr[i];
@@ -159,29 +182,23 @@ exports.submitAnswer = function(req, res)
 									}
 								}
 							}
+							if(attrName == "wins" && course==cID && newScore>rand)
+							{
+								obj[key]++;
+							}
+							else if(attrName == "losses" && course==cID && newScore<rand)
+							{
+								obj[key]++;
+							}
+							else if(attrName == "ties" && course==cID && newScore==rand)
+							{
+								obj[key]++;
+							}
 						}
 					}
 				}
 			}
 
-
-			var rand = Math.floor((Math.random() * (status["loginStatus"]["totalScore"]+1)));
-			console.log(rand);
-			status["loginStatus"]["opponentScore"]=rand;
-
-			if(newScore > rand)
-			{
-				status["loginStatus"]["result"]	= "You Won!";			
-			}
-			else if(newScore < rand)
-			{
-				status["loginStatus"]["result"]	= "You Lost!";			
-
-			}
-			else
-			{
-				status["loginStatus"]["result"]	= "It's a tie!";			
-			}
 
 			res.render('endOfMatch', {"status": status, "bestScore": bestScore});
 		}

@@ -56,9 +56,10 @@
 </div>
 
 <script type="text/javascript">
-window.onbeforeunload = function()
-{
-  return "Do not refresh this page please.";
+document.onkeydown = function (e) {
+  if(e.which == 116){
+    return false;
+  }
 }
 </script>
 

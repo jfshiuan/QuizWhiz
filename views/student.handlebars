@@ -22,7 +22,7 @@
     </div>
   </nav>
 
- 
+  
 
   <div class="container">
     <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
@@ -31,13 +31,13 @@
      <h1>Welcome {{loginStatus.name}}!</h1>
 
 
-     <img src={{loginStatus.image}} onclick="changeProfilePicture()" alt="profilePic" class="proPic">
+     
 
 
 
    </div>
 
-
+   <img src={{loginStatus.image}} onclick="changeProfilePicture()" alt="profilePic" class="proPic">
 
    <form action="/selectCourse" method="post" onSubmit="return updateSelectedCourse(this)">
 

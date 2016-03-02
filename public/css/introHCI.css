@@ -115,8 +115,12 @@ body {
 }
 
 .proPic{
-  max-width: 20%;
-  max-height: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 45%;
+  max-height: 45%;
   cursor: pointer;
 }
 

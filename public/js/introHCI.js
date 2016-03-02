@@ -7,8 +7,6 @@ $(document).ready(function() {
 	initializePage();
 })
 
-
-
 /*
  * Function that is called when the document is ready.
  */
@@ -18,7 +16,10 @@ $(document).ready(function() {
 	$('#toggleClick').click(toggleSignup);
 	//$('#instructorActionBtn').click(checkSelectedCourse);
 	$('.proPic').error(invalidImageError);
+
 }
+
+
 
 function invalidImageError(e)
 {

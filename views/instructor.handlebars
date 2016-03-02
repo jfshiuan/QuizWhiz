@@ -28,12 +28,6 @@
     <!-- p means paragraph -->
     <div class="jumbotron">
       <h1>Welcome {{loginStatus.name}}!</h1>
-      <h2>Instructor</h2>
-      <h3>Logged in as {{loginStatus.username}}</h3>
-
-
-
-
     </div>
 
     <img src={{loginStatus.image}} onclick="changeProfilePicture()" alt="profilePic" class="proPic">
@@ -53,8 +47,6 @@
        <button type="submit" id="instructorActionBtn" onClick="return selectAction('createQuiz')" type="button" class="btn btn-default">Add Question</button>
 
        <button type="submit" id="instructorActionBtn" onClick="return selectAction('classStats')" type="button" class="btn btn-default">Class Stats</button>
-
-       <button type="submit" id="instructorActionBtn" onClick="return selectAction('studentStats')" type="button" class="btn btn-default">Student Stats</button>
 
      </div>
 

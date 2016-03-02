@@ -56,15 +56,15 @@ exports.selectCourse = function(req, res)
 
 	else if(status["loginStatus"]["action"]=="createQuiz")
 	{
-		res.render('createQuiz', {"status": status, "questions": questions});	
+		res.redirect('/createQuiz');	
 	}
 	else if(status["loginStatus"]["action"]=="classStats")
 	{
-		res.render('classStats', {"status": status, "questions": questions});	
+		res.redirect('/classStats');	
 	}
 	else if(status["loginStatus"]["action"]=="studentStats")
 	{
-		res.render('studentStats', {"status": status, "questions": questions});	
+		res.redirect('/studentStats');	
 	}
 	else if(status["loginStatus"]["action"]=="play")
 	{

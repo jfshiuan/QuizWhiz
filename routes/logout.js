@@ -17,6 +17,7 @@ exports.logout = function(req, res)
 	status["loginStatus"]["questionNumber"]=0;
 	status["loginStatus"]["score"]=0;
 	status["loginStatus"]["totalScore"]=0;
+	status["loginStatus"]["opponentScore"]=0;
 
 	res.render("index");
 };

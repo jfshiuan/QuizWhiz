@@ -7,6 +7,7 @@ exports.play = function(req, res)
 	status["loginStatus"]["questionNumber"]=0;
 	status["loginStatus"]["score"]=0;
 	status["loginStatus"]["totalScore"]=0;
+	
 
 	var course=status["loginStatus"]["currentCourseID"];
 	if(course =="" || course==-1 || course==undefined)
@@ -161,6 +162,25 @@ exports.submitAnswer = function(req, res)
 						}
 					}
 				}
+			}
+
+
+			var rand = Math.floor((Math.random() * (status["loginStatus"]["totalScore"]+1)));
+			console.log(rand);
+			status["loginStatus"]["opponentScore"]=rand;
+
+			if(newScore > rand)
+			{
+				status["loginStatus"]["result"]	= "You Won!";			
+			}
+			else if(newScore < rand)
+			{
+				status["loginStatus"]["result"]	= "You Lost!";			
+
+			}
+			else
+			{
+				status["loginStatus"]["result"]	= "It's a tie!";			
 			}
 
 			res.render('endOfMatch', {"status": status, "bestScore": bestScore});

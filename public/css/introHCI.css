@@ -144,3 +144,21 @@ body {
 .studentAnswer{
   font-size: 22px;
 }
+
+.score{
+  text-align: center;
+  color:#B3DBE8;
+}
+
+.userScore{
+   color:#B3DBFA; 
+}
+
+.opponentScore{
+   color:#FABDB3; 
+}
+
+.bestScore h3{
+  font-weight: lighter;
+  font-size: 90%; 
+}

@@ -18,6 +18,8 @@
 		"action": "",
 		"questionNumber": 0,
 		"score": 0,
-		"totalScore": 0
+		"totalScore": 0,
+		"opponentScore": 0,
+		"result": ""
 	}
 }

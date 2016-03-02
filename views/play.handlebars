@@ -53,7 +53,7 @@
 
 
 
-       
+
         <h2>{{qs.question}}</h2> <br>
         <form role="form" action="/submitAnswer">
           {{#each qs.possibleAnswers}}
@@ -63,20 +63,20 @@
 
 
           <br>
-          <input type="submit" id="sendAnswer" class="btn btn-default" value="Submit Answer"></input>
+          <div class="centered"> <input type="submit" id="sendAnswer" class="btn btn-default" value="Submit Answer"></input></div>
         </form>
         <hr>
-       
-
-      </div>
-
-
+        <div class="score">Score: {{status.loginStatus.score}} / {{status.loginStatus.totalScore}}</span>
+          <hr>
+        </div>
 
 
-      <script src="https://code.jquery.com/jquery.js"></script>
-      <script src="css3-preloader-transition-start/js/main.js"></script>
-      <script src="css3-preloader-transition-finish/js/main.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/introHCI.js"></script>
-    </body>
-    </html>
+
+
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="css3-preloader-transition-start/js/main.js"></script>
+        <script src="css3-preloader-transition-finish/js/main.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/introHCI.js"></script>
+      </body>
+      </html>

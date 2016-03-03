@@ -48,7 +48,8 @@ exports.signup = function(req, res) {
 			password: req.query.password, 
 			name: req.query.name,
 			type: req.query.userType,
-			image: "/images/user.png"
+			image: "/images/user.png",
+			courses: []
 		});
 
 		if(req.query.userType=="student")

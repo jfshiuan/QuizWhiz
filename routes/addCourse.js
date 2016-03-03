@@ -74,7 +74,6 @@ exports.view = function(req, res)
 				}
 			}
 		}
-		console.log(otherCourses);
 	}
 	res.render('addCourse', {"status":status, "courses":otherCourses});
 

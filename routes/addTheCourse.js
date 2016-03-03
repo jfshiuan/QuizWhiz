@@ -5,7 +5,6 @@ var courses = require("../courses.json");
 exports.addTheCourse = function(req, res)
 {  
 	var courseID = req.body.courseDropdown;
-	//status["loginStatus"]["currentCourseID"] = courseID;
 
 
 	var courseName="";

@@ -41,6 +41,11 @@ exports.signup = function(req, res) {
 		status["loginStatus"]["username"]=username;
 		status["loginStatus"]["userType"]=req.query.userType;
 		status["loginStatus"]["image"]="/images/user.png";
+		status["loginStatus"]["courses"]=[];
+		status["loginStatus"]["questionNumber"]=0;
+		status["loginStatus"]["score"]=0;
+		status["loginStatus"]["totalScore"]=0;
+		status["loginStatus"]["opponentScore"]=0;
 
 		userData["loginData"].push(
 		{
@@ -49,7 +54,7 @@ exports.signup = function(req, res) {
 			name: req.query.name,
 			type: req.query.userType,
 			image: "/images/user.png",
-			courses: []
+			courses: status["loginStatus"]["courses"]
 		});
 
 		if(req.query.userType=="student")

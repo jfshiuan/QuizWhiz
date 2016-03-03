@@ -7,6 +7,8 @@ exports.classStats = function(req, res)
 	var statsArray=[];
 	var arr = userData["loginData"];
 
+//console.log(arr);
+
 	var courses, course, type;
 
 	for(var i=0;i<arr.length;i++)
@@ -18,14 +20,15 @@ exports.classStats = function(req, res)
 			var attrName = key;
 			var attrValue = obj[key];
 
+			if(attrName == "name")
+			{
+				name=attrValue;
+			}
 			if(attrName == "type")
 			{
 				type=attrValue;
 			}
-			if(attrName == "name" && type=="student")
-			{
-				name=attrValue;
-			}
+
 			if(attrName == "courses" && type=="student")
 			{
 				courses=attrValue;
@@ -56,7 +59,7 @@ exports.classStats = function(req, res)
 		}
 	}
 
-	console.log(statsArray);
+	//console.log(statsArray);
 
 	res.render('classStats', {"status": status, "stats": statsArray});
 };

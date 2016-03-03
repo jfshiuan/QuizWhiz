@@ -9,7 +9,33 @@ exports.addQuestions=function(req, res)
 	var choiceB = req.query.choiceB;
 	var choiceC = req.query.choiceC;
 	var choiceD = req.query.choiceD;
-	var correctAns = req.query.correctAnswer;
+	var correct = req.query.correctAnswer;
+
+	var correctAns;
+
+	switch(correct)
+	{
+		case 'A':
+		{
+			correctAns=choiceA;
+			break;
+		}
+		case 'B':
+		{
+			correctAns=choiceB;
+			break;
+		}
+		case 'C':
+		{
+			correctAns=choiceC;
+			break;
+		}
+		case 'D':
+		{
+			correctAns=choiceD;
+			break;
+		}
+	}
 
 	var selectedCourseID = status["loginStatus"]["currentCourseID"];
 

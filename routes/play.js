@@ -12,7 +12,7 @@ exports.play = function(req, res)
 	var course=status["loginStatus"]["currentCourseID"];
 	if(course =="" || course==-1 || course==undefined)
 	{
-		res.render('student', status);
+		res.redirect('/student');
 	}
 
 	else
@@ -57,7 +57,7 @@ exports.submitAnswer = function(req, res)
 	var course=status["loginStatus"]["currentCourseID"];
 	if(course =="" || course==-1 || course==undefined)
 	{
-		res.render('student', status);
+		res.redirect('/student');
 	}
 
 	else

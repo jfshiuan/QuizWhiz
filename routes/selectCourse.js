@@ -46,11 +46,11 @@ exports.selectCourse = function(req, res)
 	{
 		if(status["loginStatus"]["userType"]=="instructor")
 		{
-			res.render('instructor', status);
+			res.redirect('/instructor');
 		}
 		else
 		{
-			res.render('student', status);
+			res.redirect('/student');
 		}
 	}
 

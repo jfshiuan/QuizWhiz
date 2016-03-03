@@ -59,17 +59,17 @@ exports.signup = function(req, res) {
 
 		if(req.query.userType=="student")
 		{
-			res.render('student', status);
+			res.redirect('/student');
 		}
 
 		else
 		{
-			res.render('instructor', status);
+			res.redirect('/instructor');
 		}
 	}
 
 	else
 	{
-		res.render('index', status);
+		res.redirect('/');
 	}
 };

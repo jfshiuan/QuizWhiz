@@ -87,11 +87,11 @@ exports.login = function(req, res)
 
 		if(userType=="student")
 		{
-			res.render('student', status);
+			res.redirect('/student');
 		}
 		if(userType=="instructor")
 		{
-			res.render('instructor', status);
+			res.redirect('/instructor');
 		}
 	}
 	else
@@ -111,7 +111,7 @@ exports.login = function(req, res)
 		status["loginStatus"]["totalScore"]=0;
 		status["loginStatus"]["opponentScore"]=0;
 		
-		res.render('index', status);
+		res.redirect('/');
 	}
 
  /*data["friends"].push({name: req.query.name, 

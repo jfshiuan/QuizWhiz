@@ -19,5 +19,5 @@ exports.logout = function(req, res)
 	status["loginStatus"]["totalScore"]=0;
 	status["loginStatus"]["opponentScore"]=0;
 
-	res.render("index");
+	res.redirect("/");
 };

@@ -7,7 +7,7 @@ var courses = require("../courses.json");
 exports.view = function(req, res)
 {  
 	var username = status["loginStatus"]["username"];
-	var otherCourses=courses;
+	var otherCourses=courses.slice();
 
 	var arr = userData["loginData"];
 	var currentCourses;

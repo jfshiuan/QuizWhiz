@@ -7,9 +7,6 @@
 			"name": "name",
 			"type": "student",
 			"image": "/images/user.png",
-			"friends":
-			[
-			],
 			"courses":
 			[
 			]
@@ -20,19 +17,6 @@
 			"name": "Khaled",
 			"type:": "student",
 			"image": "/images/khaled.jpg",
-			"friends":
-			[
-				{
-					"username": "Rozay",
-					"name": "Rick Ross",
-					"image": "/images/ross.jpg"
-				},
-				{
-					"username": "Weezy",
-					"name": "Lil Wayne",
-					"image": "/images/wayne.jpg"
-				}
-			],
 			"courses":
 			[
 				{
@@ -143,9 +127,6 @@
 			"name": "Khaled",
 			"image": "/images/khaled2.jpg",
 			"type": "instructor",
-			"friends":
-			[
-			],
 			"courses":
 			[
 				{
@@ -163,6 +144,28 @@
 				{
 					"courseID": "DJK 101C",
 					"courseName": "Another One"
+				}
+			]
+		},
+		{
+			"username": "billnye",
+			"password": "scienceguy",
+			"name": "Bill",
+			"image": "/images/bill.jpg",
+			"type": "instructor",
+			"courses":
+			[
+				{
+					"courseID": "BIO 1",
+					"courseName": "Biology"
+				},
+				{
+					"courseID": "MATH 1",
+					"courseName": "Algebra"
+				},
+				{
+					"courseID": "CSE 1",
+					"courseName": "Computer Science"
 				}
 			]
 		}

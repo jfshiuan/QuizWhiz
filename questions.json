@@ -2,6 +2,66 @@
 		"course": 
 		[
 			{
+				"courseID": "CSE 1",
+				"problems":
+				[
+					{
+						"problemID": "1",
+						"question": "What is OOP?",
+						"possibleAnswers":
+						[
+						"Order of the Phoenix",
+						"Object-oriented programming",
+						"Object-oriented politics",
+						"Omega-ordinance programming"
+						],
+						"correctAnswer": "Object-oriented programming"
+					},
+					{
+						"problemID": "2",
+						"question": "Examples of OOP languages include:",
+						"possibleAnswers":
+						[
+						"Java",
+						"C++",
+						"Ruby",
+						"All of the above"
+						],
+						"correctAnswer": "All of the above"
+					}
+				]
+			},
+			{
+				"courseID": "MATH 1",
+				"problems":
+				[
+					{
+						"problemID": "1",
+						"question": "5c - 4 - 2c + 1 = 8c + 2",
+						"possibleAnswers":
+						[
+						"c = -1",
+						"c = 0",
+						"c = 1",
+						"c = 2"
+						],
+						"correctAnswer": "c = -1"
+					},
+					{
+						"problemID": "2",
+						"question": "2x - 5 > x - 2",
+						"possibleAnswers":
+						[
+						"x < 3",
+						"x > 3",
+						"x < -5",
+						"x > -2"
+						],
+						"correctAnswer": "x > 3"
+					}
+				]
+			},
+			{
 				"courseID": "",
 				"problems":
 				[
@@ -16,7 +76,6 @@
 					}
 				]
 			},
-
 			{
 				"courseID": "DJK 101B",
 				"problems":

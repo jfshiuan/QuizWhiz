@@ -68,9 +68,6 @@ exports.login = function(req, res)
 		}
 	}
 
-
-
-
 	if(validLogin)
 	{
 		status["loginStatus"]["loggedIn"]="true";
@@ -113,8 +110,4 @@ exports.login = function(req, res)
 		
 		res.redirect('/');
 	}
-
- /*data["friends"].push({name: req.query.name, 
-	 					   description: req.query.description, 
-	 					   imageURL: 'http://lorempixel.com/400/400/people'});*/
 };

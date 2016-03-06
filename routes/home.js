@@ -19,5 +19,4 @@ exports.home = function(req, res)
 	{
 		console.log("error");
 	}
-
 };

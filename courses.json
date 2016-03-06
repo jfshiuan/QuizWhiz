@@ -14,5 +14,17 @@
 	{
 		"courseID": "DJK 101C",
 		"courseName": "Another One"
+	},
+	{
+		"courseID": "BIO 1",
+		"courseName": "Biology"
+	},
+	{
+		"courseID": "MATH 1",
+		"courseName": "Algebra"
+	},
+	{
+		"courseID": "CSE 1",
+		"courseName": "Computer Science"
 	}
 ]

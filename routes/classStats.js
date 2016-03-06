@@ -7,7 +7,6 @@ exports.classStats = function(req, res)
 	var statsArray=[];
 	var arr = userData["loginData"];
 
-//console.log(arr);
 
 	var courses, course, type;
 
@@ -58,8 +57,6 @@ exports.classStats = function(req, res)
 			}
 		}
 	}
-
-	//console.log(statsArray);
 
 	res.render('classStats', {"status": status, "stats": statsArray});
 };

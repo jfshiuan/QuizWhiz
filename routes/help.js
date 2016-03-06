@@ -19,5 +19,4 @@ exports.help = function(req, res)
 	{
 		console.log("error");
 	}
-
 };

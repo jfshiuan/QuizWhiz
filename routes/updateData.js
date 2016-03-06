@@ -5,19 +5,12 @@ var status = require("../status.json");
 
 exports.changeProfilePicture = function(req, res)
 {
-
-
 	var newURL = req.body.profilePictureURL;
 	if(!(newURL==""))
 	{
-
 		status["loginStatus"]["image"]= newURL;
 		var username = status["loginStatus"]["username"];
-
-
 		var arr = userData["loginData"];
-
-		
 
 		for(var i=0;i<arr.length;i++)
 		{
@@ -48,7 +41,6 @@ exports.changeProfilePicture = function(req, res)
 					obj[key] = newURL;
 				}
 			}
-
 		}
 	}
 };

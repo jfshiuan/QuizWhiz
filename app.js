@@ -7,8 +7,6 @@
  var http = require('http');
  var path = require('path');
  var handlebars = require('express3-handlebars');
-
-
  var index = require('./routes/index');
  var login = require('./routes/login');
  var logout = require('./routes/logout');
@@ -26,7 +24,6 @@
  var getData = require('./routes/getData');
  var addQuestions = require('./routes/addQuestions');
  var updateData = require('./routes/updateData');
- var checkAnswer=require('./routes/checkAnswer');
  var addCourse = require('./routes/addCourse');
  var addTheCourse = require('./routes/addTheCourse');
 
@@ -79,14 +76,10 @@ app.get('/getSelectedCourse', getData.getSelectedCourse);
 app.get('/addQuestions', addQuestions.addQuestions);
 app.post('/selectAction', selectCourse.selectAction);
 app.post('/changeProfilePicture', updateData.changeProfilePicture);
-app.post('/checkAnswer', checkAnswer.checkAnswer);
 app.post('/getCorrectAnswer', getData.getCorrectAnswer);
 app.get('/addCourse', addCourse.view);
 app.post('/addTheCourse', addTheCourse.addTheCourse);
-//app.get('/project/:id', project.projectInfo);
-//app.get('/palette', palette.randomPalette)
-// Example route
-// app.get('/users', user.list);
+
 
 http.createServer(app).listen(app.get('port'), function(){
 	console.log('Express server listening on port ' + app.get('port'));

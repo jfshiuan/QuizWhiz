@@ -65,8 +65,11 @@
             <input type="radio" id = "correctAnswer" name="correctAnswer" value="B"> B
             <input type="radio" id = "correctAnswer" name="correctAnswer" value="C"> C
             <input type="radio" id = "correctAnswer" name="correctAnswer" value="D"> D
-            <br>
-            <input type="submit" id="addQuestionsBtn" class="btn btn-default" value="Add Question"></input>
+            <hr>
+            <div class="centered">
+            <input type="submit" id="addQuestionsBtn" class="btn btn-default" value="Submit and Return Home" onClick="return selectAction('home')"></input> <br><br>
+            <input type="submit" id="addQuestionsBtn" class="btn btn-default" value="Submit and Add Another" onClick="return selectAction('createQuiz')"></input>
+          </div>
           </form>
         </div>
 

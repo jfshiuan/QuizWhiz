@@ -109,8 +109,14 @@ exports.addQuestions=function(req, res)
 			]
 		});
 			}
-			res.redirect('/instructor');
-
+			if(status["loginStatus"]["action"] == "createQuiz")
+			{
+				res.redirect('/createQuiz');
+			}
+			else
+			{
+				res.redirect('/instructor');
+			}
 		}
 
 	};

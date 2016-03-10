@@ -84,6 +84,14 @@
 					"wins": 47,
 					"losses": 0,
 					"ties": 0
+				},
+				{
+					"courseID": "CSE 1",
+					"courseName": "Computer Science",
+					"bestScore": 2,
+					"wins": 99,
+					"losses": 0,
+					"ties": 0
 				}
 			]
 		},
@@ -117,6 +125,14 @@
 					"bestScore": 0,
 					"wins": 0,
 					"losses": 47,
+					"ties": 0
+				},
+				{
+					"courseID": "CSE 1",
+					"courseName": "Computer Science",
+					"bestScore": 1,
+					"wins": 0,
+					"losses": 99,
 					"ties": 0
 				}
 			]

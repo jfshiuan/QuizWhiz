@@ -40,30 +40,30 @@
         <div class="centered">
           <h3><b>{{status.loginStatus.currentCourseID}} - {{status.loginStatus.currentCourseName}}</b></h3>
         </div>
-    </div>
-        <table id="keywords" cellspacing="0" cellpadding="0">
-          <thead>
-            <tr>
-              <th><span>Student</span></th>
-              <th><span>Wins</span></th>
-              <th><span>Losses</span></th>
-              <th><span>Ties</span></th>
-              <th><span>Best Score</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            {{#each stats}}
-            <tr>
-              <td>{{name}}</td>
-              <td>{{wins}}</td>
-              <td>{{losses}}</td>
-              <td>{{ties}}</td>
-              <td>{{bestScore}}</td>
-            </tr>
-            {{/each}}
-          </tbody>
-        </table>
-  
+      </div>
+      <table id="keywords" cellspacing="0" cellpadding="0">
+        <thead>
+          <tr>
+            <th><span>Student</span></th>
+            <th><span>Wins</span></th>
+            <th><span>Losses</span></th>
+            <th><span>Ties</span></th>
+            <th><span>Best Score</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each stats}}
+          <tr>
+            <td>{{name}}</td>
+            <td>{{wins}}</td>
+            <td>{{losses}}</td>
+            <td>{{ties}}</td>
+            <td>{{bestScore}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      
 
 
       <script src="https://code.jquery.com/jquery.js"></script>
@@ -77,5 +77,6 @@
         $('#keywords').tablesorter(); 
       });
       </script>
+      {{> googleAnalytics}}
     </body>
     </html>

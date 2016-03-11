@@ -37,7 +37,7 @@
 
    </div>
 
-   <img src={{loginStatus.image}} onclick="changeProfilePicture()" alt="profilePic" class="proPic">
+   <img src={{loginStatus.image}} onclick="changeProfilePicture()" alt="profilePic" class="proPic" data-toggle="tooltip" title="Click to change picture.">
 
    <form action="/selectCourse" method="post" onSubmit="return updateSelectedCourse(this)">
 
@@ -80,6 +80,11 @@ $( function() {
 
   $( '#cd-dropdown' ).dropdown();
 
+});
+
+
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(); 
 });
 
 </script>

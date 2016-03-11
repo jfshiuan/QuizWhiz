@@ -41,7 +41,17 @@ exports.addTheCourse = function(req, res)
 
 	arr = userData["loginData"];
 	var username = status["loginStatus"]["username"];
-	var course = {"courseID": courseID, "courseName": courseName, "bestScore": 0, "wins": 0, "losses": 0, "ties": 0};
+	var course;
+
+	if(status["loginStatus"]["userType"]=="student")
+	{
+		course = {"courseID": courseID, "courseName": courseName, "bestScore": 0, "wins": 0, "losses": 0, "ties": 0};
+	}
+
+	else
+	{
+		course = {"courseID": courseID, "courseName": courseName};
+	}
 
 	for(var i=0; i<arr.length; i++)
 	{

@@ -30,7 +30,7 @@
       <h1>Welcome {{loginStatus.name}}!</h1>
     </div>
 
-    <img src={{loginStatus.image}} onclick="changeProfilePicture()" alt="profilePic" class="proPic">
+    <img src={{loginStatus.image}} onclick="changeProfilePicture()" alt="profilePic" class="proPic"  data-toggle="tooltip" title="Click to change picture.">
 
 
 
@@ -57,28 +57,34 @@
    </form>
 
 
+   <div class="mainButton">
+    <a href="/addCourse"> <button class="btn btn-default">Add New Courses</button> </a>
+  </div>
+
+</div>
 
 
- </div>
 
 
 
 
+<script src="https://code.jquery.com/jquery.js"></script>
 
+<script src="js/bootstrap.min.js"></script>
+<script src="js/introHCI.js"></script>
+<script type="text/javascript" src="js/jquery.dropdown.js"></script>
+<script type="text/javascript">
 
- <script src="https://code.jquery.com/jquery.js"></script>
-
- <script src="js/bootstrap.min.js"></script>
- <script src="js/introHCI.js"></script>
- <script type="text/javascript" src="js/jquery.dropdown.js"></script>
- <script type="text/javascript">
-
- $( function() {
+$( function() {
 
   $( '#cd-dropdown' ).dropdown();
 
 });
 
- </script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip(); 
+});
+
+</script>
 </body>
 </html>

@@ -20,32 +20,8 @@
 			"courses":
 			[
 				{
-					"courseID": "DJK 100",
-					"courseName": "DJ Khaled",
-					"bestScore": 0,
-					"wins": 0,
-					"losses": 0,
-					"ties": 0
-				},
-				{
-					"courseID": "DJK 101A",
-					"courseName": "We Takin' Over",
-					"bestScore": 0,
-					"wins": 0,
-					"losses": 0,
-					"ties": 0
-				},
-				{
 					"courseID": "DJK 101B",
 					"courseName": "We Da Best",
-					"bestScore": 0,
-					"wins": 0,
-					"losses": 0,
-					"ties": 0
-				},
-				{
-					"courseID": "DJK 101C",
-					"courseName": "Another One",
 					"bestScore": 0,
 					"wins": 0,
 					"losses": 0,
@@ -61,22 +37,6 @@
 			"image": "/images/albert.jpg",
 			"courses":
 			[
-				{
-					"courseID": "DJK 100",
-					"courseName": "DJ Khaled",
-					"bestScore": 100,
-					"wins": 99,
-					"losses": 0,
-					"ties": 0
-				},
-				{
-					"courseID": "DJK 101A",
-					"courseName": "We Takin' Over",
-					"bestScore": 10,
-					"wins": 35,
-					"losses": 0,
-					"ties": 0
-				},
 				{
 					"courseID": "DJK 101B",
 					"courseName": "We Da Best",
@@ -104,22 +64,6 @@
 			"courses":
 			[
 				{
-					"courseID": "DJK 100",
-					"courseName": "DJ Khaled",
-					"bestScore": 2,
-					"wins": 0,
-					"losses": 99,
-					"ties": 0
-				},
-				{
-					"courseID": "DJK 101A",
-					"courseName": "We Takin' Over",
-					"bestScore": 3,
-					"wins": 0,
-					"losses": 35,
-					"ties": 0
-				},
-				{
 					"courseID": "DJK 101B",
 					"courseName": "We Da Best",
 					"bestScore": 0,
@@ -146,20 +90,8 @@
 			"courses":
 			[
 				{
-					"courseID": "DJK 100",
-					"courseName": "DJ Khaled"
-				},
-				{
-					"courseID": "DJK 101A",
-					"courseName": "We Takin' Over"
-				},
-				{
 					"courseID": "DJK 101B",
 					"courseName": "We Da Best"
-				},
-				{
-					"courseID": "DJK 101C",
-					"courseName": "Another One"
 				}
 			]
 		},
@@ -171,10 +103,6 @@
 			"type": "instructor",
 			"courses":
 			[
-				{
-					"courseID": "BIO 1",
-					"courseName": "Biology"
-				},
 				{
 					"courseID": "MATH 1",
 					"courseName": "Algebra"

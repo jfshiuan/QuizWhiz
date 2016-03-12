@@ -41,7 +41,25 @@ exports.signup = function(req, res) {
 		status["loginStatus"]["username"]=username;
 		status["loginStatus"]["userType"]=req.query.userType;
 		status["loginStatus"]["image"]="/images/user.png";
-		status["loginStatus"]["courses"]=[];
+		status["loginStatus"]["courses"]=
+		[
+		{
+			"courseID": "DJK 101B",
+			"courseName": "We Da Best",
+			"bestScore": 0,
+			"wins": 0,
+			"losses": 0,
+			"ties": 0
+		},
+		{
+			"courseID": "CSE 1",
+			"courseName": "Computer Science",
+			"bestScore": 0,
+			"wins": 0,
+			"losses": 0,
+			"ties": 0
+		}
+		];
 		status["loginStatus"]["questionNumber"]=0;
 		status["loginStatus"]["score"]=0;
 		status["loginStatus"]["totalScore"]=0;
